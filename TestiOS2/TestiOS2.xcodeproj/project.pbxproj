@@ -211,10 +211,10 @@
 			buildConfigurationList = 15660E662450FCEC007C1B41 /* Build configuration list for PBXNativeTarget "TestiOS2" */;
 			buildPhases = (
 				A0D49F7E1C0A8AB0D3B31E3F /* [CP] Check Pods Manifest.lock */,
+				15660E7824510AF7007C1B41 /* RSwift */,
 				15660E382450FCEB007C1B41 /* Sources */,
 				15660E392450FCEB007C1B41 /* Frameworks */,
 				15660E3A2450FCEB007C1B41 /* Resources */,
-				15660E7824510AF7007C1B41 /* RSwift */,
 			);
 			buildRules = (
 			);
