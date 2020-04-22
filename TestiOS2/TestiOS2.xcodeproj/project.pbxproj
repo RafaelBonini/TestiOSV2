@@ -10,11 +10,11 @@
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E422450FCEB007C1B41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E412450FCEB007C1B41 /* SceneDelegate.swift */; };
 		15660E442450FCEB007C1B41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E432450FCEB007C1B41 /* ViewController.swift */; };
-		15660E472450FCEB007C1B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E452450FCEB007C1B41 /* Main.storyboard */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
 		15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */; };
 		15660E572450FCEC007C1B41 /* TestiOS2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E562450FCEC007C1B41 /* TestiOS2Tests.swift */; };
 		15660E622450FCEC007C1B41 /* TestiOS2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E612450FCEC007C1B41 /* TestiOS2UITests.swift */; };
+		15660E7724510923007C1B41 /* SceneDelegate+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E7624510923007C1B41 /* SceneDelegate+Methods.swift */; };
 		56CA654CBC7F66E7CCE39291 /* libPods-TestiOS2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13871F9149DA53A56E75B177 /* libPods-TestiOS2.a */; };
 		9D233EEBBE254EAF6DA3353E /* libPods-TestiOS2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9CA4FAAF6109D1EDB1931A /* libPods-TestiOS2Tests.a */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E412450FCEB007C1B41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		15660E432450FCEB007C1B41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		15660E462450FCEB007C1B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15660E482450FCEC007C1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15660E4B2450FCEC007C1B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15660E4D2450FCEC007C1B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		15660E5D2450FCEC007C1B41 /* TestiOS2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestiOS2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E612450FCEC007C1B41 /* TestiOS2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestiOS2UITests.swift; sourceTree = "<group>"; };
 		15660E632450FCEC007C1B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15660E7624510923007C1B41 /* SceneDelegate+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Methods.swift"; sourceTree = "<group>"; };
 		5E9CA4FAAF6109D1EDB1931A /* libPods-TestiOS2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestiOS2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C128FBA8E8C25FC81F69E9 /* Pods-TestiOS2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS2Tests.release.xcconfig"; path = "Target Support Files/Pods-TestiOS2Tests/Pods-TestiOS2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		697FD5B87FBC0FF1A3319DBF /* Pods-TestiOS2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS2Tests.debug.xcconfig"; path = "Target Support Files/Pods-TestiOS2Tests/Pods-TestiOS2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,13 +111,9 @@
 		15660E3E2450FCEB007C1B41 /* TestiOS2 */ = {
 			isa = PBXGroup;
 			children = (
-				15660E3F2450FCEB007C1B41 /* AppDelegate.swift */,
-				15660E412450FCEB007C1B41 /* SceneDelegate.swift */,
+				15660E7124510804007C1B41 /* Sources */,
+				15660E6F245107F6007C1B41 /* Resources */,
 				15660E432450FCEB007C1B41 /* ViewController.swift */,
-				15660E452450FCEB007C1B41 /* Main.storyboard */,
-				15660E482450FCEC007C1B41 /* Assets.xcassets */,
-				15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */,
-				15660E4D2450FCEC007C1B41 /* Info.plist */,
 			);
 			path = TestiOS2;
 			sourceTree = "<group>";
@@ -140,6 +136,50 @@
 			path = TestiOS2UITests;
 			sourceTree = "<group>";
 		};
+		15660E6F245107F6007C1B41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15660E482450FCEC007C1B41 /* Assets.xcassets */,
+				15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */,
+				15660E4D2450FCEC007C1B41 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15660E7124510804007C1B41 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				15660E73245108CC007C1B41 /* Main */,
+				15660E72245108C8007C1B41 /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		15660E72245108C8007C1B41 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		15660E73245108CC007C1B41 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				15660E74245108D3007C1B41 /* AppDelegate */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		15660E74245108D3007C1B41 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				15660E3F2450FCEB007C1B41 /* AppDelegate.swift */,
+				15660E412450FCEB007C1B41 /* SceneDelegate.swift */,
+				15660E7624510923007C1B41 /* SceneDelegate+Methods.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		37D86E87ADC7F6EF5F4C7BB8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +188,6 @@
 				697FD5B87FBC0FF1A3319DBF /* Pods-TestiOS2Tests.debug.xcconfig */,
 				66C128FBA8E8C25FC81F69E9 /* Pods-TestiOS2Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -269,7 +308,6 @@
 			files = (
 				15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */,
 				15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */,
-				15660E472450FCEB007C1B41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +381,7 @@
 			files = (
 				15660E442450FCEB007C1B41 /* ViewController.swift in Sources */,
 				15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */,
+				15660E7724510923007C1B41 /* SceneDelegate+Methods.swift in Sources */,
 				15660E422450FCEB007C1B41 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,14 +418,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		15660E452450FCEB007C1B41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15660E462450FCEB007C1B41 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -519,7 +550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2DA3YMRUV;
-				INFOPLIST_FILE = TestiOS2/Info.plist;
+				INFOPLIST_FILE = TestiOS2/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,7 +569,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2DA3YMRUV;
-				INFOPLIST_FILE = TestiOS2/Info.plist;
+				INFOPLIST_FILE = TestiOS2/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
