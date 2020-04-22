@@ -101,4 +101,7 @@ iOSInjectionProject/
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+##R.Swift
+*.generated.swift
+
 # End of https://www.gitignore.io/api/xcode,swift

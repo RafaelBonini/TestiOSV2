@@ -15,6 +15,7 @@
 		15660E572450FCEC007C1B41 /* TestiOS2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E562450FCEC007C1B41 /* TestiOS2Tests.swift */; };
 		15660E622450FCEC007C1B41 /* TestiOS2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E612450FCEC007C1B41 /* TestiOS2UITests.swift */; };
 		15660E7724510923007C1B41 /* SceneDelegate+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E7624510923007C1B41 /* SceneDelegate+Methods.swift */; };
+		15660E7A24510B49007C1B41 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E7924510B49007C1B41 /* R.generated.swift */; };
 		56CA654CBC7F66E7CCE39291 /* libPods-TestiOS2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13871F9149DA53A56E75B177 /* libPods-TestiOS2.a */; };
 		9D233EEBBE254EAF6DA3353E /* libPods-TestiOS2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9CA4FAAF6109D1EDB1931A /* libPods-TestiOS2Tests.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		15660E612450FCEC007C1B41 /* TestiOS2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestiOS2UITests.swift; sourceTree = "<group>"; };
 		15660E632450FCEC007C1B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15660E7624510923007C1B41 /* SceneDelegate+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Methods.swift"; sourceTree = "<group>"; };
+		15660E7924510B49007C1B41 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		5E9CA4FAAF6109D1EDB1931A /* libPods-TestiOS2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestiOS2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C128FBA8E8C25FC81F69E9 /* Pods-TestiOS2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS2Tests.release.xcconfig"; path = "Target Support Files/Pods-TestiOS2Tests/Pods-TestiOS2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		697FD5B87FBC0FF1A3319DBF /* Pods-TestiOS2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS2Tests.debug.xcconfig"; path = "Target Support Files/Pods-TestiOS2Tests/Pods-TestiOS2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		15660E6F245107F6007C1B41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				15660E7924510B49007C1B41 /* R.generated.swift */,
 				15660E482450FCEC007C1B41 /* Assets.xcassets */,
 				15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */,
 				15660E4D2450FCEC007C1B41 /* Info.plist */,
@@ -211,6 +214,7 @@
 				15660E382450FCEB007C1B41 /* Sources */,
 				15660E392450FCEB007C1B41 /* Frameworks */,
 				15660E3A2450FCEB007C1B41 /* Resources */,
+				15660E7824510AF7007C1B41 /* RSwift */,
 			);
 			buildRules = (
 			);
@@ -328,6 +332,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		15660E7824510AF7007C1B41 /* RSwift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = RSwift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		8F6B36FBFBA615DC1AED0552 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +405,7 @@
 			files = (
 				15660E442450FCEB007C1B41 /* ViewController.swift in Sources */,
 				15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */,
+				15660E7A24510B49007C1B41 /* R.generated.swift in Sources */,
 				15660E7724510923007C1B41 /* SceneDelegate+Methods.swift in Sources */,
 				15660E422450FCEB007C1B41 /* SceneDelegate.swift in Sources */,
 			);
