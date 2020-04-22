@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Nimble (8.0.4)
+  - Quick (2.2.0)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7.2)
+  - Nimble (= 8.0.4)
+  - Quick (= 2.2.0)
+  - R.swift (~> 5.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Nimble
+    - Quick
+    - R.swift
+    - R.swift.Library
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+
+PODFILE CHECKSUM: 73b8dbbeaf638257e6aee34c77cb9058e5b18a5f
+
+COCOAPODS: 1.9.1
