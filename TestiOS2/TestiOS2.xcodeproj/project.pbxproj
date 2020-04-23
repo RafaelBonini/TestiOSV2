@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		156570462452420300C1927B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 156570452452420300C1927B /* Localizable.strings */; };
+		1565704A245244F200C1927B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15657049245244F200C1927B /* AppColors.swift */; };
+		1565704F245247D600C1927B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565704E245247D600C1927B /* UIView+Extensions.swift */; };
+		1565705324524D3100C1927B /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705224524D3100C1927B /* LoginTextField.swift */; };
+		1565705624525A5900C1927B /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705524525A5900C1927B /* LoginButton.swift */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E422450FCEB007C1B41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E412450FCEB007C1B41 /* SceneDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
@@ -59,6 +63,10 @@
 /* Begin PBXFileReference section */
 		13871F9149DA53A56E75B177 /* libPods-TestiOS2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestiOS2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		156570452452420300C1927B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		15657049245244F200C1927B /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		1565704E245247D600C1927B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		1565705224524D3100C1927B /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		1565705524525A5900C1927B /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E412450FCEB007C1B41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +134,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15657047245244CE00C1927B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1565705424525A4500C1927B /* LoginButton */,
+				1565705024524D1B00C1927B /* LoginTextField */,
+				15657048245244D900C1927B /* Resources */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		15657048245244D900C1927B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15657049245244F200C1927B /* AppColors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1565704B245247B400C1927B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1565704D245247C300C1927B /* UIKit */,
+				1565704C245247BE00C1927B /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1565704C245247BE00C1927B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		1565704D245247C300C1927B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1565704E245247D600C1927B /* UIView+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		1565705024524D1B00C1927B /* LoginTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1565705224524D3100C1927B /* LoginTextField.swift */,
+			);
+			path = LoginTextField;
+			sourceTree = "<group>";
+		};
+		1565705424525A4500C1927B /* LoginButton */ = {
+			isa = PBXGroup;
+			children = (
+				1565705524525A5900C1927B /* LoginButton.swift */,
+			);
+			path = LoginButton;
+			sourceTree = "<group>";
+		};
 		15660E332450FCEB007C1B41 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +257,8 @@
 		15660E7124510804007C1B41 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1565704B245247B400C1927B /* Extensions */,
+				15657047245244CE00C1927B /* Components */,
 				15660E9B24511BC6007C1B41 /* Protocols */,
 				15660E73245108CC007C1B41 /* Main */,
 				15660E72245108C8007C1B41 /* Modules */,
@@ -606,7 +674,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */,
+				1565705624525A5900C1927B /* LoginButton.swift in Sources */,
 				15660EA324512D74007C1B41 /* LoginRequest.swift in Sources */,
+				1565704F245247D600C1927B /* UIView+Extensions.swift in Sources */,
+				1565705324524D3100C1927B /* LoginTextField.swift in Sources */,
 				15660EA724512F7A007C1B41 /* ServiceProtocol.swift in Sources */,
 				15660E8524510DCE007C1B41 /* Connectivity.swift in Sources */,
 				15660EAA245139AE007C1B41 /* LoginViewController.swift in Sources */,
@@ -626,6 +697,7 @@
 				15660EB424513B1E007C1B41 /* LoginService.swift in Sources */,
 				15660EA124511C59007C1B41 /* APIRequest.swift in Sources */,
 				15660EB024513A27007C1B41 /* LoginView.swift in Sources */,
+				1565704A245244F200C1927B /* AppColors.swift in Sources */,
 				15660E8D24510EDE007C1B41 /* NetworkErrorProtocol.swift in Sources */,
 				15660EB224513A6C007C1B41 /* LoginViewModel.swift in Sources */,
 			);
