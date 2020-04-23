@@ -23,12 +23,17 @@
 		15660E91245111BE007C1B41 /* NetworkCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E90245111BE007C1B41 /* NetworkCore.swift */; };
 		15660E93245115DD007C1B41 /* BaseNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E92245115DD007C1B41 /* BaseNetworkError.swift */; };
 		15660E962451164B007C1B41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E952451164B007C1B41 /* User.swift */; };
-		15660E98245116BD007C1B41 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E97245116BD007C1B41 /* Error.swift */; };
+		15660E98245116BD007C1B41 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E97245116BD007C1B41 /* ResponseError.swift */; };
 		15660E9A24511B0B007C1B41 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E9924511B0B007C1B41 /* URLs.swift */; };
 		15660E9E24511BD8007C1B41 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E9D24511BD8007C1B41 /* RequestProtocol.swift */; };
 		15660EA124511C59007C1B41 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EA024511C59007C1B41 /* APIRequest.swift */; };
 		15660EA324512D74007C1B41 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EA224512D74007C1B41 /* LoginRequest.swift */; };
 		15660EA724512F7A007C1B41 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EA624512F7A007C1B41 /* ServiceProtocol.swift */; };
+		15660EAA245139AE007C1B41 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EA9245139AE007C1B41 /* LoginViewController.swift */; };
+		15660EB024513A27007C1B41 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EAF24513A27007C1B41 /* LoginView.swift */; };
+		15660EB224513A6C007C1B41 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EB124513A6C007C1B41 /* LoginViewModel.swift */; };
+		15660EB424513B1E007C1B41 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EB324513B1E007C1B41 /* LoginService.swift */; };
+		15660EB724513EDC007C1B41 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660EB624513EDC007C1B41 /* ViewCodeProtocol.swift */; };
 		56CA654CBC7F66E7CCE39291 /* libPods-TestiOS2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13871F9149DA53A56E75B177 /* libPods-TestiOS2.a */; };
 		9D233EEBBE254EAF6DA3353E /* libPods-TestiOS2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9CA4FAAF6109D1EDB1931A /* libPods-TestiOS2Tests.a */; };
 /* End PBXBuildFile section */
@@ -74,12 +79,17 @@
 		15660E90245111BE007C1B41 /* NetworkCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCore.swift; sourceTree = "<group>"; };
 		15660E92245115DD007C1B41 /* BaseNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkError.swift; sourceTree = "<group>"; };
 		15660E952451164B007C1B41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		15660E97245116BD007C1B41 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		15660E97245116BD007C1B41 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		15660E9924511B0B007C1B41 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		15660E9D24511BD8007C1B41 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		15660EA024511C59007C1B41 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		15660EA224512D74007C1B41 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		15660EA624512F7A007C1B41 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		15660EA9245139AE007C1B41 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		15660EAF24513A27007C1B41 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		15660EB124513A6C007C1B41 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		15660EB324513B1E007C1B41 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		15660EB624513EDC007C1B41 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 		5E9CA4FAAF6109D1EDB1931A /* libPods-TestiOS2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestiOS2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C128FBA8E8C25FC81F69E9 /* Pods-TestiOS2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS2Tests.release.xcconfig"; path = "Target Support Files/Pods-TestiOS2Tests/Pods-TestiOS2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		697FD5B87FBC0FF1A3319DBF /* Pods-TestiOS2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOS2Tests.debug.xcconfig"; path = "Target Support Files/Pods-TestiOS2Tests/Pods-TestiOS2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +198,7 @@
 		15660E72245108C8007C1B41 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				15660EA824513996007C1B41 /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -249,7 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				15660E952451164B007C1B41 /* User.swift */,
-				15660E97245116BD007C1B41 /* Error.swift */,
+				15660E97245116BD007C1B41 /* ResponseError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +316,7 @@
 		15660E9B24511BC6007C1B41 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				15660EB524513ECF007C1B41 /* View */,
 				15660E9C24511BCC007C1B41 /* Service */,
 			);
 			path = Protocols;
@@ -316,6 +328,57 @@
 				15660EA624512F7A007C1B41 /* ServiceProtocol.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		15660EA824513996007C1B41 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				15660EA9245139AE007C1B41 /* LoginViewController.swift */,
+				15660EAE245139CA007C1B41 /* Router */,
+				15660EAB245139B7007C1B41 /* Service */,
+				15660EAD245139C0007C1B41 /* View */,
+				15660EAC245139BC007C1B41 /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		15660EAB245139B7007C1B41 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15660EB324513B1E007C1B41 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		15660EAC245139BC007C1B41 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15660EB124513A6C007C1B41 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15660EAD245139C0007C1B41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15660EAF24513A27007C1B41 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15660EAE245139CA007C1B41 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		15660EB524513ECF007C1B41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15660EB624513EDC007C1B41 /* ViewCodeProtocol.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		37D86E87ADC7F6EF5F4C7BB8 /* Pods */ = {
@@ -542,9 +605,10 @@
 				15660EA324512D74007C1B41 /* LoginRequest.swift in Sources */,
 				15660EA724512F7A007C1B41 /* ServiceProtocol.swift in Sources */,
 				15660E8524510DCE007C1B41 /* Connectivity.swift in Sources */,
+				15660EAA245139AE007C1B41 /* LoginViewController.swift in Sources */,
 				15660E7A24510B49007C1B41 /* R.generated.swift in Sources */,
 				15660E9A24511B0B007C1B41 /* URLs.swift in Sources */,
-				15660E98245116BD007C1B41 /* Error.swift in Sources */,
+				15660E98245116BD007C1B41 /* ResponseError.swift in Sources */,
 				15660E8F24510EF4007C1B41 /* ResponseStatus.swift in Sources */,
 				15660E7724510923007C1B41 /* SceneDelegate+Methods.swift in Sources */,
 				15660E93245115DD007C1B41 /* BaseNetworkError.swift in Sources */,
@@ -552,10 +616,14 @@
 				15660E9E24511BD8007C1B41 /* RequestProtocol.swift in Sources */,
 				15660E8A24510E7A007C1B41 /* Result.swift in Sources */,
 				15660E962451164B007C1B41 /* User.swift in Sources */,
+				15660EB724513EDC007C1B41 /* ViewCodeProtocol.swift in Sources */,
 				15660E91245111BE007C1B41 /* NetworkCore.swift in Sources */,
 				15660E422450FCEB007C1B41 /* SceneDelegate.swift in Sources */,
+				15660EB424513B1E007C1B41 /* LoginService.swift in Sources */,
 				15660EA124511C59007C1B41 /* APIRequest.swift in Sources */,
+				15660EB024513A27007C1B41 /* LoginView.swift in Sources */,
 				15660E8D24510EDE007C1B41 /* NetworkErrorProtocol.swift in Sources */,
+				15660EB224513A6C007C1B41 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,7 +799,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = testiosv2.rafael.bonini.com.TestiOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -750,7 +818,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = testiosv2.rafael.bonini.com.TestiOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -11,8 +11,11 @@ extension SceneDelegate {
     func startApp(with scene: UIScene) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UIViewController()
-        window?.makeKeyAndVisible()
         window?.windowScene = windowScene
+        let rootVc = LoginViewController(viewModel: LoginViewModel())
+        let navController =  UINavigationController(rootViewController: rootVc)
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
+
     }
 }
