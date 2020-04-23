@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  TestiOS2
+
+  Created by Rafael Bonini de Souza on 23/04/20.
+  Copyright © 2020 Rafael Bonini de Souza. All rights reserved.
+*/
+
+//Login
+"textfield.user.placeholder.text" = "User";
+"textfield.password.placeholder.text" = "Password";
+"button.title.login" = "Login";
+
+//statement
+"statement.account.label" = "Conta";
+"statement.balance.label" = "Saldo";
+"statement.recent.label" = "Recentes";

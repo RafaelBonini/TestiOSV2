@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156570462452420300C1927B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 156570452452420300C1927B /* Localizable.strings */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E422450FCEB007C1B41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E412450FCEB007C1B41 /* SceneDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		13871F9149DA53A56E75B177 /* libPods-TestiOS2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestiOS2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		156570452452420300C1927B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E412450FCEB007C1B41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				15660E482450FCEC007C1B41 /* Assets.xcassets */,
 				15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */,
 				15660E4D2450FCEC007C1B41 /* Info.plist */,
+				156570452452420300C1927B /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */,
+				156570462452420300C1927B /* Localizable.strings in Resources */,
 				15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

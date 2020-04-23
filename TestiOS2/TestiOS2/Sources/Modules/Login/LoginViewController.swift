@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
     }
     
     override func loadView() {
-        super.loadView()
         view = contentView
     }
     
