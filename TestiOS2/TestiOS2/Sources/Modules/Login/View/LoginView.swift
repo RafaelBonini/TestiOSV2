@@ -8,7 +8,11 @@
 
 import UIKit
 
-class LoginView: UIView {
+class LoginView: UIView, KeyboardManagerBuilder {
+    
+    var keyboardManager: KeyboardAnchorManager?
+    var topMostConstraint: NSLayoutConstraint?
+    var bottomMostConstraint: NSLayoutConstraint?
     
     let viewModel: LoginViewModel
     
@@ -43,13 +47,21 @@ class LoginView: UIView {
         return textfield
     }()
     
-    private lazy var button: LoginButton = {
+    private lazy var loginButton: LoginButton = {
         let button = LoginButton(
             title: R.string.localizable.buttonTitleLogin()
         )
         button.backgroundColor = AppColors.custom.strongBlue
         
         return button
+    }()
+    
+    lazy var buttonContainerView: UIView = {
+        return loginButton
+    }()
+    
+    lazy var textFieldContainerView: UIView = {
+       return textFieldsStack
     }()
     
     init(viewModel: LoginViewModel) {
@@ -72,13 +84,16 @@ extension LoginView: ViewCodeProtocol {
         textFieldsStack.addArrangedSubview(userTextField)
         textFieldsStack.addArrangedSubview(passwordTextField)
 
-        addSubview(button)
+        addSubview(loginButton)
     }
     
     func setupConstraints() {
         
+        let topConstraint = logoImageView.topAnchor.constraint(equalTo: safeArea().topAnchor, constant: 36)
+        topMostConstraint = topConstraint
+        
         logoImageView.constraint { view in
-            [view.topAnchor.constraint(equalTo: safeArea().topAnchor, constant: 36),
+            [topConstraint,
              view.centerXAnchor.constraint(equalTo: centerXAnchor)]
         }
         
@@ -96,16 +111,22 @@ extension LoginView: ViewCodeProtocol {
             [view.heightAnchor.constraint(equalToConstant: 50)]
         }
         
-        button.constraint { view in
+        let bottomConstraint = bottomAnchor.constraint(equalTo: loginButton.bottomAnchor,
+                                                                  constant: 42)
+        bottomMostConstraint = bottomConstraint
+        
+        loginButton.constraint { view in
             [view.centerXAnchor.constraint(equalTo: centerXAnchor),
-             view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -42),
+             /*view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -42),*/
              view.heightAnchor.constraint(equalToConstant: 50),
-             view.widthAnchor.constraint(equalToConstant: 190)]
+             view.widthAnchor.constraint(equalToConstant: 190),
+            bottomConstraint]
         }
     }
     
     func additionalSetup() {
         backgroundColor = .white
+        configureKeyboardManager()
     }
 }
 

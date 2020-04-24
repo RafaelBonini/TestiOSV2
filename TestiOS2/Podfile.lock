@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
+  - IQKeyboardManagerSwift (6.5.5)
   - Nimble (8.0.4)
   - Quick (2.2.0)
   - R.swift (5.1.0):
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.2)
+  - IQKeyboardManagerSwift (~> 6.5.4)
   - Nimble (= 8.0.4)
   - Quick (= 2.2.0)
   - R.swift (~> 5.1.0)
@@ -15,6 +17,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IQKeyboardManagerSwift
     - Nimble
     - Quick
     - R.swift
@@ -22,11 +25,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
 
-PODFILE CHECKSUM: 73b8dbbeaf638257e6aee34c77cb9058e5b18a5f
+PODFILE CHECKSUM: 92839fbd3ec3da4451bf349744d853170340b662
 
 COCOAPODS: 1.9.1

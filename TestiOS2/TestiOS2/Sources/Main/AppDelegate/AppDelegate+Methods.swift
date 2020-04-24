@@ -1,5 +1,5 @@
 //
-//  SceneDelegate+Methods.swift
+//  AppDelegate+Methods.swift
 //  TestiOS2
 //
 //  Created by Rafael Bonini de Souza on 22/04/20.
@@ -7,15 +7,11 @@
 //
 
 import UIKit
-extension SceneDelegate {
-    func startApp(with scene: UIScene) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.windowScene = windowScene
+extension AppDelegate {
+    func startApp() {
         let rootVc = LoginViewController(viewModel: LoginViewModel())
         let navController =  UINavigationController(rootViewController: rootVc)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
-
     }
 }
