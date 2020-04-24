@@ -15,3 +15,8 @@
 "statement.account.label" = "Conta";
 "statement.balance.label" = "Saldo";
 "statement.recent.label" = "Recentes";
+
+//error message
+"common.error.title" = "Ops..";
+"user.error.desc" = "Por favor, insira um usuário valido.";
+"password.error.desc" = "Por favor, insira uma senha valida.";

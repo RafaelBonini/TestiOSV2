@@ -15,6 +15,11 @@
 		1565705A24525DFB00C1927B /* KeyboardAnchorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705924525DFB00C1927B /* KeyboardAnchorManager.swift */; };
 		1565705C24525E0B00C1927B /* KeyboardManagerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705B24525E0B00C1927B /* KeyboardManagerBuilder.swift */; };
 		1565705F24525E5400C1927B /* KeyboardConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705E24525E5400C1927B /* KeyboardConfiguration.swift */; };
+		1565706224527EDE00C1927B /* LoginViewModel+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565706124527EDE00C1927B /* LoginViewModel+Validations.swift */; };
+		1565706524527FEB00C1927B /* CPFEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565706424527FEB00C1927B /* CPFEmailValidator.swift */; };
+		156570672452802A00C1927B /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570662452802A00C1927B /* StringValidator.swift */; };
+		15657069245280C000C1927B /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15657068245280C000C1927B /* String+Validations.swift */; };
+		1565706B2452822500C1927B /* PasswordValidatior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565706A2452822500C1927B /* PasswordValidatior.swift */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
 		15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */; };
@@ -72,6 +77,11 @@
 		1565705924525DFB00C1927B /* KeyboardAnchorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAnchorManager.swift; sourceTree = "<group>"; };
 		1565705B24525E0B00C1927B /* KeyboardManagerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManagerBuilder.swift; sourceTree = "<group>"; };
 		1565705E24525E5400C1927B /* KeyboardConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardConfiguration.swift; sourceTree = "<group>"; };
+		1565706124527EDE00C1927B /* LoginViewModel+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Validations.swift"; sourceTree = "<group>"; };
+		1565706424527FEB00C1927B /* CPFEmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFEmailValidator.swift; sourceTree = "<group>"; };
+		156570662452802A00C1927B /* StringValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidator.swift; sourceTree = "<group>"; };
+		15657068245280C000C1927B /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
+		1565706A2452822500C1927B /* PasswordValidatior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatior.swift; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E482450FCEC007C1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +178,7 @@
 		1565704C245247BE00C1927B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				15657068245280C000C1927B /* String+Validations.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -220,6 +231,16 @@
 				1565705B24525E0B00C1927B /* KeyboardManagerBuilder.swift */,
 			);
 			path = KeyboardAnchorManager;
+			sourceTree = "<group>";
+		};
+		1565706324527FBA00C1927B /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				1565706424527FEB00C1927B /* CPFEmailValidator.swift */,
+				1565706A2452822500C1927B /* PasswordValidatior.swift */,
+				156570662452802A00C1927B /* StringValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		15660E332450FCEB007C1B41 = {
@@ -417,6 +438,7 @@
 		15660E9B24511BC6007C1B41 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1565706324527FBA00C1927B /* Validators */,
 				15660EB524513ECF007C1B41 /* View */,
 				15660E9C24511BCC007C1B41 /* Service */,
 			);
@@ -455,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				15660EB124513A6C007C1B41 /* LoginViewModel.swift */,
+				1565706124527EDE00C1927B /* LoginViewModel+Validations.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -704,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */,
+				1565706B2452822500C1927B /* PasswordValidatior.swift in Sources */,
 				1565705624525A5900C1927B /* LoginButton.swift in Sources */,
 				15660EA324512D74007C1B41 /* LoginRequest.swift in Sources */,
 				1565704F245247D600C1927B /* UIView+Extensions.swift in Sources */,
@@ -714,13 +738,16 @@
 				15660E7A24510B49007C1B41 /* R.generated.swift in Sources */,
 				15660E9A24511B0B007C1B41 /* URLs.swift in Sources */,
 				15660E98245116BD007C1B41 /* ResponseError.swift in Sources */,
+				15657069245280C000C1927B /* String+Validations.swift in Sources */,
 				15660E8F24510EF4007C1B41 /* ResponseStatus.swift in Sources */,
 				15660E7724510923007C1B41 /* AppDelegate+Methods.swift in Sources */,
+				156570672452802A00C1927B /* StringValidator.swift in Sources */,
 				15660E93245115DD007C1B41 /* BaseNetworkError.swift in Sources */,
 				15660E8824510E5E007C1B41 /* Method.swift in Sources */,
 				15660E9E24511BD8007C1B41 /* RequestProtocol.swift in Sources */,
 				15660E8A24510E7A007C1B41 /* Result.swift in Sources */,
 				1565705A24525DFB00C1927B /* KeyboardAnchorManager.swift in Sources */,
+				1565706524527FEB00C1927B /* CPFEmailValidator.swift in Sources */,
 				15660E962451164B007C1B41 /* User.swift in Sources */,
 				1565705C24525E0B00C1927B /* KeyboardManagerBuilder.swift in Sources */,
 				15660EB724513EDC007C1B41 /* ViewCodeProtocol.swift in Sources */,
@@ -731,6 +758,7 @@
 				15660EB024513A27007C1B41 /* LoginView.swift in Sources */,
 				1565704A245244F200C1927B /* AppColors.swift in Sources */,
 				15660E8D24510EDE007C1B41 /* NetworkErrorProtocol.swift in Sources */,
+				1565706224527EDE00C1927B /* LoginViewModel+Validations.swift in Sources */,
 				15660EB224513A6C007C1B41 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

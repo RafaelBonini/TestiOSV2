@@ -35,6 +35,8 @@ class LoginView: UIView, KeyboardManagerBuilder {
         let textfield = LoginTextField(
             placeholder: R.string.localizable.textfieldUserPlaceholderText()
         )
+        textfield.returnKeyType = .next
+        textfield.addTarget(self, action: #selector(nextReturnKeyTap), for: .primaryActionTriggered)
         
         return textfield
     }()
@@ -43,6 +45,8 @@ class LoginView: UIView, KeyboardManagerBuilder {
         let textfield = LoginTextField(
             placeholder: R.string.localizable.textfieldPasswordPlaceholderText()
         )
+        textfield.returnKeyType = .done
+        textfield.addTarget(self, action: #selector(loginTapped), for: .primaryActionTriggered)
         
         return textfield
     }()
@@ -72,6 +76,14 @@ class LoginView: UIView, KeyboardManagerBuilder {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func nextReturnKeyTap(){
+        passwordTextField.becomeFirstResponder()
+    }
+    
+    @objc func loginTapped() {
+        
     }
 }
 
