@@ -30,7 +30,7 @@ extension PasswordValidatior {
     func validate(password: String?) -> String? {
 
         guard let password = password,
-            !password.isEmpty,
+            password.isEmpty,
             !password.validatePasswordRegex() else {
                 return nil
         }

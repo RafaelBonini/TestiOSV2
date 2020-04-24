@@ -12,11 +12,15 @@ class LoginViewController: UIViewController {
     
     let viewModel: LoginViewModel
     let contentView: LoginView
+    var router: LoginRouter = LoginRouter()
     
-    init(viewModel: LoginViewModel = LoginViewModel()) {
+    init(viewModel: LoginViewModel = LoginViewModel(),
+         loginRouter: LoginRouterProtocol = LoginRouter()) {
         self.viewModel = viewModel
         self.contentView = LoginView(viewModel: viewModel)
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.controllerDelegate = self
+        self.router.viewController = self
     }
     
     override func viewDidLoad() {
@@ -30,5 +34,15 @@ class LoginViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension LoginViewController: ViewControllerDelegate {
+    func navigateToStatement(with user: UserAccount) {
+        self.router.navigateToStatement(with: user)
+    }
+    
+    func showAlert(with message: String) {
+        showAlertMessage(message: message)
     }
 }

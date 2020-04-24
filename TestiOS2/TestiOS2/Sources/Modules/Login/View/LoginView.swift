@@ -35,8 +35,12 @@ class LoginView: UIView, KeyboardManagerBuilder {
         let textfield = LoginTextField(
             placeholder: R.string.localizable.textfieldUserPlaceholderText()
         )
+        textfield.keyboardType = .emailAddress
         textfield.returnKeyType = .next
         textfield.addTarget(self, action: #selector(nextReturnKeyTap), for: .primaryActionTriggered)
+        if #available(iOS 11.0, *) {
+            textfield.textContentType = .username
+        }
         
         return textfield
     }()
@@ -47,6 +51,11 @@ class LoginView: UIView, KeyboardManagerBuilder {
         )
         textfield.returnKeyType = .done
         textfield.addTarget(self, action: #selector(loginTapped), for: .primaryActionTriggered)
+        textfield.isSecureTextEntry = true
+        if #available(iOS 11.0, *) {
+            textfield.textContentType = .password
+        }
+        
         
         return textfield
     }()
@@ -56,6 +65,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
             title: R.string.localizable.buttonTitleLogin()
         )
         button.backgroundColor = AppColors.custom.strongBlue
+        button.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         
         return button
     }()
@@ -83,7 +93,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
     }
     
     @objc func loginTapped() {
-        
+        self.viewModel.login(cpfOrEmail: userTextField.text, password: passwordTextField.text)
     }
 }
 

@@ -16,13 +16,17 @@ extension LoginViewModel: CPFEmailValidator, PasswordValidatior {
         }
     }
 
-    func cpfValidation(value: String?) -> String? {
-        guard let value = value else { return nil }
-        return validatingMessage(value, validation: .cpfEmail)
+    func cpfEmailValidation(value: String?) -> Bool {
+        guard let value = value else { return false }
+        guard let message = validatingMessage(value, validation: .cpfEmail) else { return true }
+        controllerDelegate?.showAlert(with: message)
+        return false
     }
     
-    func passwordValidation(value: String?) -> String? {
-        guard let value = value else { return nil }
-        return validatingMessage(value, validation: .password)
+    func passwordValidation(value: String?) -> Bool {
+        guard let value = value else { return false }
+        guard let message = validatingMessage(value, validation: .password) else { return true }
+        controllerDelegate?.showAlert(with: message)
+        return false
     }
 }
