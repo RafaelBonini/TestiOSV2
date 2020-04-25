@@ -18,6 +18,6 @@
 
 //error message
 "common.error.title" = "Ops..";
-"user.error.desc" = "Por favor, insira um usuário valido.";
+"common.login.error.desc" = "Verifique as informações e tente novamente!";
 "password.error.desc" = "Por favor, insira uma senha valida.";
 "common.ok" = "OK";

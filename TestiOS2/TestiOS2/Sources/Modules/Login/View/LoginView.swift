@@ -41,6 +41,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
         if #available(iOS 11.0, *) {
             textfield.textContentType = .username
         }
+        textfield.text = "asd@asf.com"
         
         return textfield
     }()
@@ -55,7 +56,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
         if #available(iOS 11.0, *) {
             textfield.textContentType = .password
         }
-        
+        textfield.text = "Asd568@@"
         
         return textfield
     }()
@@ -139,7 +140,6 @@ extension LoginView: ViewCodeProtocol {
         
         loginButton.constraint { view in
             [view.centerXAnchor.constraint(equalTo: centerXAnchor),
-             /*view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -42),*/
              view.heightAnchor.constraint(equalToConstant: 50),
              view.widthAnchor.constraint(equalToConstant: 190),
             bottomConstraint]

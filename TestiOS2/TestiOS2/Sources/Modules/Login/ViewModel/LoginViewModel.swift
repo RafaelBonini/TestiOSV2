@@ -18,8 +18,10 @@ class LoginViewModel {
     }
 
     func login(cpfOrEmail: String?, password: String?) {
-        guard cpfEmailValidation(value: cpfOrEmail),
-            passwordValidation(value: password) else { return }
+        guard validate(cpfEmail: cpfOrEmail),
+            validate(password: password) else {
+                controllerDelegate?.showAlert(with: R.string.localizable.commonLoginErrorDesc())
+                return }
         
         guard let user = cpfOrEmail, let password = password else { return }
         loginRequest(with: user, password: password)
@@ -31,8 +33,6 @@ class LoginViewModel {
     
     func treatLoginFailure() {
     }
-    
-    private func showAlert(with message: String) {
-        
-    }
 }
+
+extension LoginViewModel: CPFEmailValidator, PasswordValidatior { }

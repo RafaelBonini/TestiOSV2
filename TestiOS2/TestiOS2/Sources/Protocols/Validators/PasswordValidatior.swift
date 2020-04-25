@@ -9,7 +9,6 @@
 import Foundation
 
 protocol PasswordValidatior: StringValidator {
-    func validate(password: String?) -> String?
     func validate(password: String?) -> Bool
 }
 
@@ -27,14 +26,14 @@ extension PasswordValidatior {
         return true
     }
 
-    func validate(password: String?) -> String? {
-
-        guard let password = password,
-            password.isEmpty,
-            !password.validatePasswordRegex() else {
-                return nil
-        }
-
-        return errorMessage(validation: .password)
-    }
+//    func validate(password: String?) -> String? {
+//
+//        guard let password = password,
+//            !password.isEmpty,
+//            !password.validatePasswordRegex() else {
+//                return nil
+//        }
+//
+//        return errorMessage(validation: .password)
+//    }
 }

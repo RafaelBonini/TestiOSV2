@@ -12,12 +12,16 @@ protocol LoginRouterProtocol: class {
     func navigateToStatement(with user: UserAccount)
 }
 
-
 class LoginRouter: LoginRouterProtocol {
     
     weak var viewController: LoginViewController?
     
     func navigateToStatement(with user: UserAccount) {
+        print(user)
         
+        let viewModel = StatementViewModel(user: user)
+        let statementViewController = StatementViewController(viewModel: viewModel)
+        
+        viewController?.navigationController?.pushViewController(statementViewController, animated: true)
     }
 }

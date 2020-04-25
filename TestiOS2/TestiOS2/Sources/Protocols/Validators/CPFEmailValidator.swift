@@ -9,7 +9,6 @@
 import Foundation
 
 protocol CPFEmailValidator: StringValidator {
-    func validate(cpfEmail: String?) -> String?
     func validate(cpfEmail: String?) -> Bool
 }
 
@@ -20,25 +19,21 @@ extension CPFEmailValidator {
             return false
         }
 
-        guard cpfEmail.validateCpf() else {
-            return false
-        }
-        
-        guard cpfEmail.validateEmailRegex() else {
+        guard cpfEmail.validateCpf() || cpfEmail.validateEmailRegex() else {
             return false
         }
 
         return true
     }
 
-    func validate(cpfEmail: String?) -> String? {
-        guard
-            let cpfEmail = cpfEmail,
-            !cpfEmail.isEmpty,
-            !cpfEmail.validateCpf(),
-            !cpfEmail.validateEmailRegex()
-            else { return nil }
-
-        return errorMessage(validation: .cpfEmail)
-    }
+//    func validate(cpfEmail: String?) -> String? {
+//        guard
+//            let cpfEmail = cpfEmail,
+//            !cpfEmail.isEmpty,
+//            !cpfEmail.validateCpf(),
+//            !cpfEmail.validateEmailRegex()
+//            else { return nil }
+//
+//        return errorMessage(validation: .cpfEmail)
+//    }
 }

@@ -15,7 +15,6 @@
 		1565705A24525DFB00C1927B /* KeyboardAnchorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705924525DFB00C1927B /* KeyboardAnchorManager.swift */; };
 		1565705C24525E0B00C1927B /* KeyboardManagerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705B24525E0B00C1927B /* KeyboardManagerBuilder.swift */; };
 		1565705F24525E5400C1927B /* KeyboardConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565705E24525E5400C1927B /* KeyboardConfiguration.swift */; };
-		1565706224527EDE00C1927B /* LoginViewModel+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565706124527EDE00C1927B /* LoginViewModel+Validations.swift */; };
 		1565706524527FEB00C1927B /* CPFEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565706424527FEB00C1927B /* CPFEmailValidator.swift */; };
 		156570672452802A00C1927B /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570662452802A00C1927B /* StringValidator.swift */; };
 		15657069245280C000C1927B /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15657068245280C000C1927B /* String+Validations.swift */; };
@@ -24,6 +23,9 @@
 		1565706F2452931000C1927B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565706E2452931000C1927B /* UIViewController+Extensions.swift */; };
 		15657072245293FD00C1927B /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15657071245293FD00C1927B /* ViewControllerDelegate.swift */; };
 		1565707424529B7300C1927B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565707324529B7300C1927B /* LoginRouter.swift */; };
+		1565707A245306A400C1927B /* StatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15657079245306A400C1927B /* StatementViewController.swift */; };
+		1565707C2453071000C1927B /* StatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565707B2453071000C1927B /* StatementView.swift */; };
+		1565707E2453071F00C1927B /* StatementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565707D2453071F00C1927B /* StatementViewModel.swift */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
 		15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */; };
@@ -81,7 +83,6 @@
 		1565705924525DFB00C1927B /* KeyboardAnchorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAnchorManager.swift; sourceTree = "<group>"; };
 		1565705B24525E0B00C1927B /* KeyboardManagerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManagerBuilder.swift; sourceTree = "<group>"; };
 		1565705E24525E5400C1927B /* KeyboardConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardConfiguration.swift; sourceTree = "<group>"; };
-		1565706124527EDE00C1927B /* LoginViewModel+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Validations.swift"; sourceTree = "<group>"; };
 		1565706424527FEB00C1927B /* CPFEmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFEmailValidator.swift; sourceTree = "<group>"; };
 		156570662452802A00C1927B /* StringValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidator.swift; sourceTree = "<group>"; };
 		15657068245280C000C1927B /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
@@ -90,6 +91,9 @@
 		1565706E2452931000C1927B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		15657071245293FD00C1927B /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
 		1565707324529B7300C1927B /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		15657079245306A400C1927B /* StatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewController.swift; sourceTree = "<group>"; };
+		1565707B2453071000C1927B /* StatementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementView.swift; sourceTree = "<group>"; };
+		1565707D2453071F00C1927B /* StatementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModel.swift; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E482450FCEC007C1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,6 +264,40 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		156570752453067700C1927B /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+				156570782453069300C1927B /* Service */,
+				156570772453069000C1927B /* View */,
+				156570762453068700C1927B /* ViewModel */,
+				15657079245306A400C1927B /* StatementViewController.swift */,
+			);
+			path = Statement;
+			sourceTree = "<group>";
+		};
+		156570762453068700C1927B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1565707D2453071F00C1927B /* StatementViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		156570772453069000C1927B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1565707B2453071000C1927B /* StatementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		156570782453069300C1927B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		15660E332450FCEB007C1B41 = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +375,7 @@
 		15660E72245108C8007C1B41 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				156570752453067700C1927B /* Statement */,
 				15660EA824513996007C1B41 /* Login */,
 			);
 			path = Modules;
@@ -496,7 +535,6 @@
 			children = (
 				15660EB124513A6C007C1B41 /* LoginViewModel.swift */,
 				1565706C2452886F00C1927B /* LoginViewModel+Requester.swift */,
-				1565706124527EDE00C1927B /* LoginViewModel+Validations.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -749,8 +787,10 @@
 				1565706D2452886F00C1927B /* LoginViewModel+Requester.swift in Sources */,
 				15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */,
 				1565706B2452822500C1927B /* PasswordValidatior.swift in Sources */,
+				1565707A245306A400C1927B /* StatementViewController.swift in Sources */,
 				1565705624525A5900C1927B /* LoginButton.swift in Sources */,
 				1565706F2452931000C1927B /* UIViewController+Extensions.swift in Sources */,
+				1565707C2453071000C1927B /* StatementView.swift in Sources */,
 				15660EA324512D74007C1B41 /* LoginRequest.swift in Sources */,
 				1565704F245247D600C1927B /* UIView+Extensions.swift in Sources */,
 				1565705324524D3100C1927B /* LoginTextField.swift in Sources */,
@@ -768,6 +808,7 @@
 				156570672452802A00C1927B /* StringValidator.swift in Sources */,
 				15660E93245115DD007C1B41 /* BaseNetworkError.swift in Sources */,
 				15660E8824510E5E007C1B41 /* Method.swift in Sources */,
+				1565707E2453071F00C1927B /* StatementViewModel.swift in Sources */,
 				15660E9E24511BD8007C1B41 /* RequestProtocol.swift in Sources */,
 				15660E8A24510E7A007C1B41 /* Result.swift in Sources */,
 				1565705A24525DFB00C1927B /* KeyboardAnchorManager.swift in Sources */,
@@ -782,7 +823,6 @@
 				15660EB024513A27007C1B41 /* LoginView.swift in Sources */,
 				1565704A245244F200C1927B /* AppColors.swift in Sources */,
 				15660E8D24510EDE007C1B41 /* NetworkErrorProtocol.swift in Sources */,
-				1565706224527EDE00C1927B /* LoginViewModel+Validations.swift in Sources */,
 				15660EB224513A6C007C1B41 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
