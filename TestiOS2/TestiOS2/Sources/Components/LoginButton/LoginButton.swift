@@ -22,7 +22,7 @@ class LoginButton: UIButton {
     
     private func setTitle(title: String) {
         self.setTitle(title, for: .normal)
-        self.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        self.titleLabel?.font = AppFont.defaultRegularFontWithSize(size: 16)
         self.titleLabel?.textColor = .white
     }
     

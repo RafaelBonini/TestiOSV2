@@ -26,6 +26,9 @@
 		1565707A245306A400C1927B /* StatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15657079245306A400C1927B /* StatementViewController.swift */; };
 		1565707C2453071000C1927B /* StatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565707B2453071000C1927B /* StatementView.swift */; };
 		1565707E2453071F00C1927B /* StatementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565707D2453071F00C1927B /* StatementViewModel.swift */; };
+		156570882453C3D200C1927B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570872453C3D200C1927B /* AppFont.swift */; };
+		1565708B2453CE7C00C1927B /* StatementTitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565708A2453CE7C00C1927B /* StatementTitleValueView.swift */; };
+		1565708D2453D9A300C1927B /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565708C2453D9A300C1927B /* Float+Extensions.swift */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
 		15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */; };
@@ -94,6 +97,9 @@
 		15657079245306A400C1927B /* StatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewController.swift; sourceTree = "<group>"; };
 		1565707B2453071000C1927B /* StatementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementView.swift; sourceTree = "<group>"; };
 		1565707D2453071F00C1927B /* StatementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModel.swift; sourceTree = "<group>"; };
+		156570872453C3D200C1927B /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		1565708A2453CE7C00C1927B /* StatementTitleValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementTitleValueView.swift; sourceTree = "<group>"; };
+		1565708C2453D9A300C1927B /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E482450FCEC007C1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 		15657047245244CE00C1927B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				156570892453CE7500C1927B /* StatementTitleValueView */,
 				1565705424525A4500C1927B /* LoginButton */,
 				1565705024524D1B00C1927B /* LoginTextField */,
 				15657048245244D900C1927B /* Resources */,
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				15657049245244F200C1927B /* AppColors.swift */,
+				156570872453C3D200C1927B /* AppFont.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				15657068245280C000C1927B /* String+Validations.swift */,
+				1565708C2453D9A300C1927B /* Float+Extensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -296,6 +305,14 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		156570892453CE7500C1927B /* StatementTitleValueView */ = {
+			isa = PBXGroup;
+			children = (
+				1565708A2453CE7C00C1927B /* StatementTitleValueView.swift */,
+			);
+			path = StatementTitleValueView;
 			sourceTree = "<group>";
 		};
 		15660E332450FCEB007C1B41 = {
@@ -784,6 +801,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1565708D2453D9A300C1927B /* Float+Extensions.swift in Sources */,
 				1565706D2452886F00C1927B /* LoginViewModel+Requester.swift in Sources */,
 				15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */,
 				1565706B2452822500C1927B /* PasswordValidatior.swift in Sources */,
@@ -791,6 +809,7 @@
 				1565705624525A5900C1927B /* LoginButton.swift in Sources */,
 				1565706F2452931000C1927B /* UIViewController+Extensions.swift in Sources */,
 				1565707C2453071000C1927B /* StatementView.swift in Sources */,
+				1565708B2453CE7C00C1927B /* StatementTitleValueView.swift in Sources */,
 				15660EA324512D74007C1B41 /* LoginRequest.swift in Sources */,
 				1565704F245247D600C1927B /* UIView+Extensions.swift in Sources */,
 				1565705324524D3100C1927B /* LoginTextField.swift in Sources */,
@@ -813,6 +832,7 @@
 				15660E8A24510E7A007C1B41 /* Result.swift in Sources */,
 				1565705A24525DFB00C1927B /* KeyboardAnchorManager.swift in Sources */,
 				1565706524527FEB00C1927B /* CPFEmailValidator.swift in Sources */,
+				156570882453C3D200C1927B /* AppFont.swift in Sources */,
 				15660E962451164B007C1B41 /* User.swift in Sources */,
 				1565705C24525E0B00C1927B /* KeyboardManagerBuilder.swift in Sources */,
 				15660EB724513EDC007C1B41 /* ViewCodeProtocol.swift in Sources */,

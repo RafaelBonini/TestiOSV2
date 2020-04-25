@@ -23,7 +23,7 @@ class LoginTextField: UITextField {
     }
     
     private func setFont() {
-        font = UIFont(name: "Helvetica Neue", size: 15)
+        font = AppFont.defaultRegularFontWithSize(size: 15)
         textColor = AppColors.custom.placeHolderlightBlue
     }
     private func setPlaceholder(placeHolder: String) {

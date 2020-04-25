@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
         view = contentView
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

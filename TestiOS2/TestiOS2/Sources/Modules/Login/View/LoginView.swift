@@ -23,7 +23,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
         return imageView
     }()
     
-    private lazy var textFieldsStack: UIStackView = {
+    private lazy var textFieldsStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 21
@@ -76,7 +76,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
     }()
     
     lazy var textFieldContainerView: UIView = {
-       return textFieldsStack
+       return textFieldsStackView
     }()
     
     init(viewModel: LoginViewModel) {
@@ -103,9 +103,9 @@ extension LoginView: ViewCodeProtocol {
     func setupHierarchy() {
         addSubview(logoImageView)
         
-        addSubview(textFieldsStack)
-        textFieldsStack.addArrangedSubview(userTextField)
-        textFieldsStack.addArrangedSubview(passwordTextField)
+        addSubview(textFieldsStackView)
+        textFieldsStackView.addArrangedSubview(userTextField)
+        textFieldsStackView.addArrangedSubview(passwordTextField)
 
         addSubview(loginButton)
     }
@@ -120,7 +120,7 @@ extension LoginView: ViewCodeProtocol {
              view.centerXAnchor.constraint(equalTo: centerXAnchor)]
         }
         
-        textFieldsStack.constraint { view in
+        textFieldsStackView.constraint { view in
             [view.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 105),
              view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
              view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)]
