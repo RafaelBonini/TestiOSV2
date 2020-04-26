@@ -10,7 +10,7 @@ import Foundation
 
 class LoginViewModel {
     
-    weak var controllerDelegate: ViewControllerDelegate?
+    weak var controllerDelegate: LoginViewControllerDelegate?
     let loginService: LoginServiceProtocol
 
     init(loginService: LoginServiceProtocol = LoginService()) {

@@ -1,5 +1,5 @@
 //
-//  ViewControllerDelegate.swift
+//  LoginViewControllerDelegate.swift
 //  TestiOS2
 //
 //  Created by Rafael Bonini de Souza on 24/04/20.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ViewControllerDelegate: LoginRouterProtocol {
+protocol LoginViewControllerDelegate: LoginRouterProtocol {
     func showAlert(with message: String)
 }

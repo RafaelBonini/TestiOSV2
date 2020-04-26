@@ -28,11 +28,12 @@ class StatementView: UIView {
         return label
     }()
     
-    private lazy var logoutImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = R.image.logout_icon()
+    private lazy var logoutButton: UIButton = {
+        let button = UIButton()
+        button.setImage(R.image.logout_icon(), for: .normal)
+        button.addTarget(self, action: #selector(tappedLogout), for: .touchUpInside)
         
-        return imageView
+        return button
     }()
     
     private lazy var accountView: StatementTitleValueView = {
@@ -56,20 +57,60 @@ class StatementView: UIView {
     private lazy var recentLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultRegularFontWithSize(size: 17)
-        label.textColor = AppColors.custom.darkGray
+        label.textColor = AppColors.custom.darkGrey
         label.text = R.string.localizable.statementRecentLabel()
         
         return label
     }()
     
+    private lazy var statementTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 95
+        tableView.separatorInset = .zero
+        tableView.separatorStyle = .none
+        tableView.tableFooterView = UIView()
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundView = self.loadingIndicator
+        
+        return tableView
+    }()
+    
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .gray)
+        indicator.startAnimating()
+        
+        return indicator
+    }()
+    
     init(viewModel: StatementViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
+        self.viewModel.viewDelegate = self
         buildView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func tappedLogout() {
+        self.viewModel.logout()
+    }
+}
+
+extension StatementView: StatementViewModelViewDelegate {
+    func reloadTableView() {
+        self.statementTableView.reloadData()
+        self.viewModel.setupDataSource(in: statementTableView)
+    }
+    
+    func startloading() {
+        self.loadingIndicator.startAnimating()
+    }
+    
+    func stoploading() {
+        loadingIndicator.stopAnimating()
     }
 }
 
@@ -79,11 +120,14 @@ extension StatementView: ViewCodeProtocol {
         addSubview(topPortionContainer)
         
         topPortionContainer.addSubview(nameLabel)
-        topPortionContainer.addSubview(logoutImageView)
+        topPortionContainer.addSubview(logoutButton)
         topPortionContainer.addSubview(accountView)
         topPortionContainer.addSubview(balanceView)
         
         addSubview(recentLabel)
+        addSubview(statementTableView)
+//        addSubview(loadingIndicator)
+//        statementTableView.addSubview(loadingIndicator)
     }
     
     func setupConstraints() {
@@ -99,7 +143,7 @@ extension StatementView: ViewCodeProtocol {
              view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18)]
         }
         
-        logoutImageView.constraint { view in
+        logoutButton.constraint { view in
             [view.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
              view.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10),
              view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -13),
@@ -125,6 +169,18 @@ extension StatementView: ViewCodeProtocol {
              view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
              view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18)]
         }
+        
+        statementTableView.constraint { view in
+            [view.topAnchor.constraint(equalTo: recentLabel.bottomAnchor, constant: 15),
+             view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+             view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+             view.bottomAnchor.constraint(equalTo: bottomAnchor)]
+        }
+        
+//        loadingIndicator.constraint { view in
+//            [view.centerYAnchor.constraint(equalTo: statementTableView.centerYAnchor),
+//             view.centerXAnchor.constraint(equalTo: statementTableView.centerXAnchor)]
+//        }
     }
     
     func additionalSetup() {

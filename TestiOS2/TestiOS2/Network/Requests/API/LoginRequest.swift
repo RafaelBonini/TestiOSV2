@@ -6,7 +6,6 @@
 //  Copyright © 2020 Rafael Bonini de Souza. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 enum LoginRequest: APIRequest {

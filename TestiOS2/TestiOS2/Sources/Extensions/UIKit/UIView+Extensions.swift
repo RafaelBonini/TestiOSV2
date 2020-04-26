@@ -21,4 +21,17 @@ extension UIView {
             return layoutMarginsGuide
         }
     }
+    
+    func addSubviewWithConstraints(subview: UIView, leading: CGFloat = 0.0, trailing: CGFloat = 0.0,
+                                   top: CGFloat = 0.0, bottom: CGFloat = 0.0) {
+        self.addSubview(subview)
+        subview.constraint { view in
+            [
+                view.leadingAnchor.constraint(equalTo: safeArea().leadingAnchor, constant: leading),
+                view.trailingAnchor.constraint(equalTo: safeArea().trailingAnchor, constant: trailing),
+                view.topAnchor.constraint(equalTo: safeArea().topAnchor, constant: top),
+                view.bottomAnchor.constraint(equalTo: safeArea().bottomAnchor, constant: bottom)
+            ]
+        }
+    }
 }

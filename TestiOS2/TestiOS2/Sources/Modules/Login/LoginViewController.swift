@@ -14,8 +14,7 @@ class LoginViewController: UIViewController {
     let contentView: LoginView
     var router: LoginRouter = LoginRouter()
     
-    init(viewModel: LoginViewModel = LoginViewModel(),
-         loginRouter: LoginRouterProtocol = LoginRouter()) {
+    init(viewModel: LoginViewModel = LoginViewModel()) {
         self.viewModel = viewModel
         self.contentView = LoginView(viewModel: viewModel)
         super.init(nibName: nil, bundle: nil)
@@ -41,7 +40,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: ViewControllerDelegate {
+extension LoginViewController: LoginViewControllerDelegate {
     func navigateToStatement(with user: UserAccount) {
         self.router.navigateToStatement(with: user)
     }

@@ -6,13 +6,52 @@
 //  Copyright © 2020 Rafael Bonini de Souza. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class StatementViewModel {
     let user: UserAccount
     
-    init(user: UserAccount) {
+    weak var viewDelegate: StatementViewModelViewDelegate?
+    weak var controllerDelegate: StatementViewControllerDelegate?
+    
+    let statementService: StatementServiceProtocol
+    private var dataSource: TableViewDataSource?
+    var factoryState: StatementFactoryState {
+        didSet {
+            updateUI()
+            viewDelegate?.reloadTableView()
+        }
+    }
+    
+    init(user: UserAccount,
+         statementService: StatementServiceProtocol = StatementService()) {
         self.user = user
+        self.statementService = statementService
+        factoryState = .loading
+    }
+    
+    func updateUI() {
+        switch factoryState {
+        case .success:
+            viewDelegate?.stoploading()
+        case .loading:
+            viewDelegate?.startloading()
+        case .error:
+            print("error")
+        }
+    }
+    
+    func setupDataSource(in tableView: UITableView) {
+        let factory = StatementFactory(state: factoryState)
+
+        self.dataSource = TableViewDataSource(
+            sections: factory.make(),
+            tableView: tableView
+        )
+    }
+    
+    func logout() {
+        controllerDelegate?.popStatementController()
     }
     
     func buildAccount() -> String {
