@@ -47,6 +47,13 @@
 		156570B42455087100C1927B /* StatementViewModelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570B32455087100C1927B /* StatementViewModelViewDelegate.swift */; };
 		156570B72455C33A00C1927B /* StatementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570B62455C33A00C1927B /* StatementRouter.swift */; };
 		156570B92455C44700C1927B /* StatementViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570B82455C44700C1927B /* StatementViewControllerDelegate.swift */; };
+		156570BB2455EF5100C1927B /* LoginViewModelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570BA2455EF5100C1927B /* LoginViewModelViewDelegate.swift */; };
+		156570BD2455F0F000C1927B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570BC2455F0F000C1927B /* String+Extensions.swift */; };
+		156570C02455F9C400C1927B /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570BF2455F9C400C1927B /* KeychainSwift.swift */; };
+		156570C22455FA2400C1927B /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C12455FA2400C1927B /* KeychainSwiftAccessOptions.swift */; };
+		156570C42456101500C1927B /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C32456101400C1927B /* TegKeychainConstants.swift */; };
+		156570C62456115C00C1927B /* KeychainSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C52456115C00C1927B /* KeychainSwift+Extensions.swift */; };
+		156570C9245611C700C1927B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C8245611C700C1927B /* Storage.swift */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
 		15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */; };
@@ -136,6 +143,13 @@
 		156570B32455087100C1927B /* StatementViewModelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModelViewDelegate.swift; sourceTree = "<group>"; };
 		156570B62455C33A00C1927B /* StatementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementRouter.swift; sourceTree = "<group>"; };
 		156570B82455C44700C1927B /* StatementViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewControllerDelegate.swift; sourceTree = "<group>"; };
+		156570BA2455EF5100C1927B /* LoginViewModelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelViewDelegate.swift; sourceTree = "<group>"; };
+		156570BC2455F0F000C1927B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		156570BF2455F9C400C1927B /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
+		156570C12455FA2400C1927B /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
+		156570C32456101400C1927B /* TegKeychainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TegKeychainConstants.swift; sourceTree = "<group>"; };
+		156570C52456115C00C1927B /* KeychainSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainSwift+Extensions.swift"; sourceTree = "<group>"; };
+		156570C8245611C700C1927B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E482450FCEC007C1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +241,7 @@
 			children = (
 				1565704D245247C300C1927B /* UIKit */,
 				1565704C245247BE00C1927B /* Foundation */,
+				156570C52456115C00C1927B /* KeychainSwift+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +251,7 @@
 			children = (
 				15657068245280C000C1927B /* String+Validations.swift */,
 				1565708C2453D9A300C1927B /* Float+Extensions.swift */,
+				156570BC2455F0F000C1927B /* String+Extensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -269,6 +285,7 @@
 		1565705724525DC100C1927B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				156570BE2455F97900C1927B /* Keychain */,
 				156570A52454DD7300C1927B /* UITableView */,
 				1565705824525DCF00C1927B /* Keyboard */,
 			);
@@ -307,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				15657071245293FD00C1927B /* LoginViewControllerDelegate.swift */,
+				156570BA2455EF5100C1927B /* LoginViewModelViewDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -419,6 +437,24 @@
 				156570B62455C33A00C1927B /* StatementRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		156570BE2455F97900C1927B /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				156570BF2455F9C400C1927B /* KeychainSwift.swift */,
+				156570C12455FA2400C1927B /* KeychainSwiftAccessOptions.swift */,
+				156570C32456101400C1927B /* TegKeychainConstants.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		156570C7245611C000C1927B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				156570C8245611C700C1927B /* Storage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		15660E332450FCEB007C1B41 = {
@@ -619,6 +655,7 @@
 		15660E9B24511BC6007C1B41 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				156570C7245611C000C1927B /* Storage */,
 				156570A024548D5300C1927B /* Identifiable */,
 				15657097245484B300C1927B /* TableView */,
 				1565706324527FBA00C1927B /* Validators */,
@@ -926,6 +963,7 @@
 				156570B42455087100C1927B /* StatementViewModelViewDelegate.swift in Sources */,
 				1565706F2452931000C1927B /* UIViewController+Extensions.swift in Sources */,
 				1565709B245484D600C1927B /* TableViewSection.swift in Sources */,
+				156570C62456115C00C1927B /* KeychainSwift+Extensions.swift in Sources */,
 				1565707C2453071000C1927B /* StatementView.swift in Sources */,
 				1565708B2453CE7C00C1927B /* StatementTitleValueView.swift in Sources */,
 				15660EA324512D74007C1B41 /* LoginRequest.swift in Sources */,
@@ -933,16 +971,20 @@
 				1565704F245247D600C1927B /* UIView+Extensions.swift in Sources */,
 				1565705324524D3100C1927B /* LoginTextField.swift in Sources */,
 				156570AF245503AF00C1927B /* StatementRequest.swift in Sources */,
+				156570BD2455F0F000C1927B /* String+Extensions.swift in Sources */,
 				15660EA724512F7A007C1B41 /* ServiceProtocol.swift in Sources */,
 				15660E8524510DCE007C1B41 /* Connectivity.swift in Sources */,
 				15657072245293FD00C1927B /* LoginViewControllerDelegate.swift in Sources */,
+				156570C42456101500C1927B /* TegKeychainConstants.swift in Sources */,
 				15660EAA245139AE007C1B41 /* LoginViewController.swift in Sources */,
+				156570C22455FA2400C1927B /* KeychainSwiftAccessOptions.swift in Sources */,
 				15660E7A24510B49007C1B41 /* R.generated.swift in Sources */,
 				156570B72455C33A00C1927B /* StatementRouter.swift in Sources */,
 				156570A92454DD8A00C1927B /* TableViewItem.swift in Sources */,
 				15660E9A24511B0B007C1B41 /* URLs.swift in Sources */,
 				1565707424529B7300C1927B /* LoginRouter.swift in Sources */,
 				15660E98245116BD007C1B41 /* ResponseError.swift in Sources */,
+				156570BB2455EF5100C1927B /* LoginViewModelViewDelegate.swift in Sources */,
 				15657069245280C000C1927B /* String+Validations.swift in Sources */,
 				15660E8F24510EF4007C1B41 /* ResponseStatus.swift in Sources */,
 				156570922454830000C1927B /* StatementFactory.swift in Sources */,
@@ -955,6 +997,7 @@
 				15660E9E24511BD8007C1B41 /* RequestProtocol.swift in Sources */,
 				156570AB2454DE0700C1927B /* StatementFactoryState.swift in Sources */,
 				156570A72454DD8000C1927B /* TableViewDataSource.swift in Sources */,
+				156570C9245611C700C1927B /* Storage.swift in Sources */,
 				156570A224548D5C00C1927B /* Identifiable.swift in Sources */,
 				15660E8A24510E7A007C1B41 /* Result.swift in Sources */,
 				1565705A24525DFB00C1927B /* KeyboardAnchorManager.swift in Sources */,
@@ -970,6 +1013,7 @@
 				15660EB024513A27007C1B41 /* LoginView.swift in Sources */,
 				1565704A245244F200C1927B /* AppColors.swift in Sources */,
 				15660E8D24510EDE007C1B41 /* NetworkErrorProtocol.swift in Sources */,
+				156570C02455F9C400C1927B /* KeychainSwift.swift in Sources */,
 				156570942454830C00C1927B /* StatementCellBuilder.swift in Sources */,
 				15660EB224513A6C007C1B41 /* LoginViewModel.swift in Sources */,
 			);

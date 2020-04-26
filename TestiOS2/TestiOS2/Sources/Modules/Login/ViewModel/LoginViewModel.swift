@@ -11,10 +11,14 @@ import Foundation
 class LoginViewModel {
     
     weak var controllerDelegate: LoginViewControllerDelegate?
+    weak var viewDelegate: LoginViewModelViewDelegate?
     let loginService: LoginServiceProtocol
+    let storage: Storage
 
-    init(loginService: LoginServiceProtocol = LoginService()) {
+    init(loginService: LoginServiceProtocol = LoginService(),
+         storage: Storage = KeychainSwift()) {
         self.loginService = loginService
+        self.storage = storage
     }
 
     func login(cpfOrEmail: String?, password: String?) {
@@ -25,6 +29,22 @@ class LoginViewModel {
         
         guard let user = cpfOrEmail, let password = password else { return }
         loginRequest(with: user, password: password)
+    }
+    
+    
+    func saveCredentials(cpfOrEmail: String) {
+        guard let cpfOrEmail = cpfOrEmail.data(using: .utf8) else { return }
+        storage.set(cpfOrEmail, forKey: .emailOrCpf)
+    }
+    
+    func loadCredentials() -> String? {
+        guard
+            let user = storage.getData(.emailOrCpf) else {
+                return ""
+        }
+        let userDecoded = String(data: user, encoding: .utf8)
+
+        return userDecoded
     }
     
     func treatLoginSuccess(with user: UserAccount) {

@@ -41,7 +41,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
         if #available(iOS 11.0, *) {
             textfield.textContentType = .username
         }
-        textfield.text = "asd@asf.com"
+        textfield.text = viewModel.loadCredentials() ?? ""
         
         return textfield
     }()
@@ -56,7 +56,6 @@ class LoginView: UIView, KeyboardManagerBuilder {
         if #available(iOS 11.0, *) {
             textfield.textContentType = .password
         }
-        textfield.text = "Asd568@@"
         
         return textfield
     }()
@@ -82,6 +81,7 @@ class LoginView: UIView, KeyboardManagerBuilder {
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
+        self.viewModel.viewDelegate = self
         buildView()
     }
     
@@ -98,6 +98,15 @@ class LoginView: UIView, KeyboardManagerBuilder {
     }
 }
 
+extension LoginView: LoginViewModelViewDelegate {
+    func startloading() {
+        loginButton.loading()
+    }
+    
+    func stopLoading() {
+        loginButton.stoploading()
+    }
+}
 
 extension LoginView: ViewCodeProtocol {
     func setupHierarchy() {
@@ -151,4 +160,3 @@ extension LoginView: ViewCodeProtocol {
         configureKeyboardManager()
     }
 }
-

@@ -10,27 +10,52 @@ import UIKit
 
 class LoginButton: UIButton {
     
+    let title: String
+    
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let aIndicator = UIActivityIndicatorView(style: .white)
+        aIndicator.hidesWhenStopped = true
+        return aIndicator
+    }()
+    
     init(title: String){
+        self.title = title
         super.init(frame: .zero)
-        setButton(title: title)
+        buildView()
     }
     
-    private func setButton(title: String) {
-        setTitle(title: title)
-        setBorder()
+    func loading() {
+        isEnabled = false
+        setTitle("", for: .normal)
+        activityIndicator.startAnimating()
     }
     
-    private func setTitle(title: String) {
-        self.setTitle(title, for: .normal)
-        self.titleLabel?.font = AppFont.defaultRegularFontWithSize(size: 16)
-        self.titleLabel?.textColor = .white
-    }
-    
-    private func setBorder() {
-        self.layer.cornerRadius = 4
+    func stoploading() {
+        isEnabled = true
+        setTitle(title, for: .normal)
+        activityIndicator.stopAnimating()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension LoginButton: ViewCodeProtocol {
+    func setupHierarchy() {
+        addSubview(activityIndicator)
+    }
+    
+    func setupConstraints() {
+        activityIndicator.constraint { view in
+            [view.centerYAnchor.constraint(equalTo: centerYAnchor),
+            view.centerXAnchor.constraint(equalTo: centerXAnchor)]
+        }
+    }
+    func additionalSetup() {
+        self.setTitle(title, for: .normal)
+        self.titleLabel?.font = AppFont.defaultRegularFontWithSize(size: 16)
+        self.titleLabel?.textColor = .white
+        self.layer.cornerRadius = 4
     }
 }

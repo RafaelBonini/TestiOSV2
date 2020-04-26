@@ -31,7 +31,7 @@ extension StatementCellBuilder: TableViewCellBuilder {
         cell.configure(
             title: item.title ?? "",
             desc: item.desc ?? "",
-            date: item.date ?? "",
+            date: item.date?.formattedDate() ?? "",
             value: item.value ?? 0.0
         )
 

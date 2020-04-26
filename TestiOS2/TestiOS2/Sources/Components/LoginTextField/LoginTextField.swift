@@ -24,7 +24,7 @@ class LoginTextField: UITextField {
     
     private func setFont() {
         font = AppFont.defaultRegularFontWithSize(size: 15)
-        textColor = AppColors.custom.placeHolderlightBlue
+        textColor = AppColors.custom.darkGrey
     }
     private func setPlaceholder(placeHolder: String) {
         attributedPlaceholder = NSAttributedString(

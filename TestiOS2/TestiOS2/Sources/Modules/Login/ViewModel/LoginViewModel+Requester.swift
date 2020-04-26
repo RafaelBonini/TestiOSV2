@@ -8,7 +8,9 @@
 
 extension LoginViewModel {
     func loginRequest(with cpfOrEmail: String, password: String) {
+        viewDelegate?.startloading()
         loginService.fetchUser(user: cpfOrEmail, password: password) { (result: Result<LoginModel, BaseNetworkError>) in
+            self.viewDelegate?.stopLoading()
             switch result {
             case .success(let result):
                 guard
@@ -17,7 +19,7 @@ extension LoginViewModel {
                         self.treatLoginFailure()
                         return
                 }
-                
+                self.saveCredentials(cpfOrEmail: cpfOrEmail)
                 self.treatLoginSuccess(with: user)
             case.failure(_):
                 self.treatLoginFailure()
