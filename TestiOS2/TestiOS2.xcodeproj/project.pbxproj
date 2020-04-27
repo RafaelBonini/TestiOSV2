@@ -54,10 +54,18 @@
 		156570C42456101500C1927B /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C32456101400C1927B /* TegKeychainConstants.swift */; };
 		156570C62456115C00C1927B /* KeychainSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C52456115C00C1927B /* KeychainSwift+Extensions.swift */; };
 		156570C9245611C700C1927B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C8245611C700C1927B /* Storage.swift */; };
+		156570D124564B4B00C1927B /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570D024564B4B00C1927B /* LoginViewControllerSpec.swift */; };
+		156570D724564F6B00C1927B /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570D624564F6B00C1927B /* LoginViewModelSpec.swift */; };
+		156570D92456557500C1927B /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570D82456557500C1927B /* UserMock.swift */; };
+		156570E0245678DF00C1927B /* ResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570DF245678DF00C1927B /* ResultSpec.swift */; };
+		156570E32456795900C1927B /* NetworkErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570E22456795900C1927B /* NetworkErrorMock.swift */; };
+		156570E724567CAD00C1927B /* StringExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570E624567CAD00C1927B /* StringExtensionsSpec.swift */; };
+		156570E924567E9700C1927B /* FloatExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570E824567E9700C1927B /* FloatExtensionsSpec.swift */; };
+		156570EC2456810C00C1927B /* StringValidationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570EB2456810C00C1927B /* StringValidationSpec.swift */; };
+		156570EE245689F400C1927B /* ResponseStatusSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570ED245689F400C1927B /* ResponseStatusSpec.swift */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
 		15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */; };
-		15660E572450FCEC007C1B41 /* TestiOS2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E562450FCEC007C1B41 /* TestiOS2Tests.swift */; };
 		15660E622450FCEC007C1B41 /* TestiOS2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E612450FCEC007C1B41 /* TestiOS2UITests.swift */; };
 		15660E7724510923007C1B41 /* AppDelegate+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E7624510923007C1B41 /* AppDelegate+Methods.swift */; };
 		15660E7A24510B49007C1B41 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E7924510B49007C1B41 /* R.generated.swift */; };
@@ -150,13 +158,21 @@
 		156570C32456101400C1927B /* TegKeychainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TegKeychainConstants.swift; sourceTree = "<group>"; };
 		156570C52456115C00C1927B /* KeychainSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainSwift+Extensions.swift"; sourceTree = "<group>"; };
 		156570C8245611C700C1927B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		156570D024564B4B00C1927B /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
+		156570D624564F6B00C1927B /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
+		156570D82456557500C1927B /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
+		156570DF245678DF00C1927B /* ResultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSpec.swift; sourceTree = "<group>"; };
+		156570E22456795900C1927B /* NetworkErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorMock.swift; sourceTree = "<group>"; };
+		156570E624567CAD00C1927B /* StringExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsSpec.swift; sourceTree = "<group>"; };
+		156570E824567E9700C1927B /* FloatExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensionsSpec.swift; sourceTree = "<group>"; };
+		156570EB2456810C00C1927B /* StringValidationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidationSpec.swift; sourceTree = "<group>"; };
+		156570ED245689F400C1927B /* ResponseStatusSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatusSpec.swift; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E482450FCEC007C1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15660E4B2450FCEC007C1B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15660E4D2450FCEC007C1B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15660E522450FCEC007C1B41 /* TestiOS2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestiOS2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		15660E562450FCEC007C1B41 /* TestiOS2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestiOS2Tests.swift; sourceTree = "<group>"; };
 		15660E582450FCEC007C1B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15660E5D2450FCEC007C1B41 /* TestiOS2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestiOS2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E612450FCEC007C1B41 /* TestiOS2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestiOS2UITests.swift; sourceTree = "<group>"; };
@@ -457,6 +473,97 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		156570CA24564AC400C1927B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				156570CC24564AD600C1927B /* Statement */,
+				156570CB24564AD200C1927B /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		156570CB24564AD200C1927B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				156570D024564B4B00C1927B /* LoginViewControllerSpec.swift */,
+				156570D624564F6B00C1927B /* LoginViewModelSpec.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		156570CC24564AD600C1927B /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Statement;
+			sourceTree = "<group>";
+		};
+		156570CD24564AE300C1927B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				156570E524567C9500C1927B /* Foundation */,
+				156570E424567C9000C1927B /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		156570CE24564AEB00C1927B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		156570D224564BF200C1927B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				156570E12456793500C1927B /* Network */,
+				156570D82456557500C1927B /* UserMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		156570DA2456579800C1927B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		156570DE245678D000C1927B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				156570DF245678DF00C1927B /* ResultSpec.swift */,
+				156570ED245689F400C1927B /* ResponseStatusSpec.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		156570E12456793500C1927B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				156570E22456795900C1927B /* NetworkErrorMock.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		156570E424567C9000C1927B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		156570E524567C9500C1927B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				156570E624567CAD00C1927B /* StringExtensionsSpec.swift */,
+				156570E824567E9700C1927B /* FloatExtensionsSpec.swift */,
+				156570EB2456810C00C1927B /* StringValidationSpec.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		15660E332450FCEB007C1B41 = {
 			isa = PBXGroup;
 			children = (
@@ -492,7 +599,12 @@
 		15660E552450FCEC007C1B41 /* TestiOS2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				15660E562450FCEC007C1B41 /* TestiOS2Tests.swift */,
+				156570DE245678D000C1927B /* Network */,
+				156570DA2456579800C1927B /* Resources */,
+				156570D224564BF200C1927B /* Mocks */,
+				156570CE24564AEB00C1927B /* Components */,
+				156570CD24564AE300C1927B /* Extensions */,
+				156570CA24564AC400C1927B /* Modules */,
 				15660E582450FCEC007C1B41 /* Info.plist */,
 			);
 			path = TestiOS2Tests;
@@ -1023,7 +1135,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15660E572450FCEC007C1B41 /* TestiOS2Tests.swift in Sources */,
+				156570D124564B4B00C1927B /* LoginViewControllerSpec.swift in Sources */,
+				156570D92456557500C1927B /* UserMock.swift in Sources */,
+				156570D724564F6B00C1927B /* LoginViewModelSpec.swift in Sources */,
+				156570EE245689F400C1927B /* ResponseStatusSpec.swift in Sources */,
+				156570E0245678DF00C1927B /* ResultSpec.swift in Sources */,
+				156570EC2456810C00C1927B /* StringValidationSpec.swift in Sources */,
+				156570E924567E9700C1927B /* FloatExtensionsSpec.swift in Sources */,
+				156570E32456795900C1927B /* NetworkErrorMock.swift in Sources */,
+				156570E724567CAD00C1927B /* StringExtensionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1225,7 +1345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2DA3YMRUV;
 				INFOPLIST_FILE = TestiOS2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1248,7 +1368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2DA3YMRUV;
 				INFOPLIST_FILE = TestiOS2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

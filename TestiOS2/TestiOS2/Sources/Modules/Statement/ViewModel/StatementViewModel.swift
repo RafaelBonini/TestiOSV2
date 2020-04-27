@@ -37,7 +37,7 @@ class StatementViewModel {
         case .loading:
             viewDelegate?.startloading()
         case .error:
-            print("error")
+            treatFailure()
         }
     }
     
@@ -48,6 +48,10 @@ class StatementViewModel {
             sections: factory.make(),
             tableView: tableView
         )
+    }
+    
+    func treatFailure() {
+        controllerDelegate?.showAlert(with: R.string.localizable.commonServiceErrorDesc())
     }
     
     func logout() {

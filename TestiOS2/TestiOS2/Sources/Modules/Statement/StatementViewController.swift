@@ -41,6 +41,10 @@ class StatementViewController: UIViewController {
 }
 
 extension StatementViewController: StatementViewControllerDelegate {
+    func showAlert(with message: String) {
+        showAlertMessage(message: message)
+    }
+    
     func popStatementController() {
         self.router.popStatementController()
     }

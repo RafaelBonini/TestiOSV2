@@ -7,5 +7,5 @@
 //
 
 protocol StatementViewControllerDelegate: StatementRouterProtocol {
-    
+        func showAlert(with message: String)
 }

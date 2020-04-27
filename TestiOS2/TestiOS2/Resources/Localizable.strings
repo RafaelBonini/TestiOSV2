@@ -19,5 +19,6 @@
 //error message
 "common.error.title" = "Ops..";
 "common.login.error.desc" = "Verifique as informações e tente novamente!";
+"common.service.error.desc" = "Algo deu errado, tente novamente mais tarde!";
 "password.error.desc" = "Por favor, insira uma senha valida.";
 "common.ok" = "OK";

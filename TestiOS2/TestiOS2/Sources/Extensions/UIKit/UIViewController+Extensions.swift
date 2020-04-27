@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIViewController {
-  
     func showAlertMessage(title: String = R.string.localizable.commonErrorTitle(), message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: R.string.localizable.commonOk(), style: .default, handler: nil))

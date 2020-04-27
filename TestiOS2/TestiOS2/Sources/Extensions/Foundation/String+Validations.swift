@@ -23,7 +23,7 @@ extension String {
     }
 
     func validateCpfRegex() -> Bool {
-        let cpfRegex = "[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
+        let cpfRegex = "[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{2}"
         let cpfValidator = NSPredicate(format: "SELF MATCHES %@", cpfRegex)
         return cpfValidator.evaluate(with: self)
     }
@@ -35,12 +35,6 @@ extension String {
         }
 
         let cpf = self.replacingOccurrences(of: "-", with: "").replacingOccurrences(of: ".", with: "")
-
-        for index in 0...9 {
-            if cpf.replacingOccurrences(of: String(index), with: "").isEmpty {
-                return false
-            }
-        }
 
         if cpf.count == 11 {
 

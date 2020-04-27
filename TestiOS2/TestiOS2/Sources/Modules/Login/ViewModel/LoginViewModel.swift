@@ -52,6 +52,7 @@ class LoginViewModel {
     }
     
     func treatLoginFailure() {
+        controllerDelegate?.showAlert(with: R.string.localizable.commonServiceErrorDesc())
     }
 }
 

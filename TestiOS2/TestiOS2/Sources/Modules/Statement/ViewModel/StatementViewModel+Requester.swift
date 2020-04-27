@@ -8,14 +8,20 @@
 import Foundation
 extension StatementViewModel {
     func fetchStatementst() {
-        statementService.fetchStatements(with: self.user.userId ?? -1) { (result: Result<StatementsModel, BaseNetworkError>) in
+        guard let userId = self.user.userId else { return }
+        statementService.fetchStatements(with: userId) { (result: Result<StatementsModel, BaseNetworkError>) in
             switch result {
-            case .success(let model):
+            case .success(let result):
+                guard
+                    let _ = result.error,
+                    let statements = result.statementList else {
+                        self.treatFailure()
+                        return
+                }
                 
-                guard let statements = model.statementList else { return }
                 self.factoryState = .success(statements)
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                self.treatFailure()
             }
         }
     }
