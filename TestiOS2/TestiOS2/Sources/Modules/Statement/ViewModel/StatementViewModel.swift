@@ -37,6 +37,7 @@ class StatementViewModel {
         case .loading:
             viewDelegate?.startloading()
         case .error:
+            viewDelegate?.stoploading()
             treatFailure()
         }
     }

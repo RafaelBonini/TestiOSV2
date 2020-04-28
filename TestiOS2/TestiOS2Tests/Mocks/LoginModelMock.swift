@@ -1,11 +1,12 @@
 //
-//  UserMock.swift
+//  LoginModelMock.swift
 //  TestiOS2Tests
 //
 //  Created by Rafael Bonini de Souza on 26/04/20.
 //  Copyright © 2020 Rafael Bonini de Souza. All rights reserved.
 //
 
+import Foundation
 @testable import TestiOS2
 
 class LoginModelMock {
@@ -18,6 +19,11 @@ class LoginModelMock {
 
     static func invalid() -> LoginModel {
         return LoginModel(userAccount: nil, error: nil)
+    }
+    
+    static func asData() -> Data? {
+        let json = try? JSONEncoder().encode(loginResponse)
+        return json
     }
 }
 

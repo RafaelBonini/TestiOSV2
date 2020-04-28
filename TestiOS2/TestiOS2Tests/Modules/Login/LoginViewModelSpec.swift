@@ -64,13 +64,24 @@ class LoginViewModelSpec: QuickSpec {
                     sut.login(cpfOrEmail: "asd@asd.com", password: "Aa124@@")
                 }
                 
-                it("Then should display an alert") {
+                it("Then it should display an alert") {
                     expect(controllerDelegateMock.didCallShowAlert).to(beTrue())
                 }
                 
-                it("then should have changed the status to loading and stoped after the service") {
+                it("then it should have changed the status to loading and stoped after the service") {
                     expect(viewDelegateMock.didCallStartLoading).to(beTrue())
                     expect(viewDelegateMock.didCallStopLoading).to(beTrue())
+                }
+            }
+            
+            context("treating a failure") {
+                beforeEach {
+                    configureSut()
+                    sut.treatLoginFailure()
+                }
+                
+                it("then it should show an alert") {
+                    expect(controllerDelegateMock.didCallShowAlert).to(beTrue())
                 }
             }
             

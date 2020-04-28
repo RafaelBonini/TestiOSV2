@@ -56,13 +56,26 @@
 		156570C9245611C700C1927B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C8245611C700C1927B /* Storage.swift */; };
 		156570D124564B4B00C1927B /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570D024564B4B00C1927B /* LoginViewControllerSpec.swift */; };
 		156570D724564F6B00C1927B /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570D624564F6B00C1927B /* LoginViewModelSpec.swift */; };
-		156570D92456557500C1927B /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570D82456557500C1927B /* UserMock.swift */; };
+		156570D92456557500C1927B /* LoginModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570D82456557500C1927B /* LoginModelMock.swift */; };
 		156570E0245678DF00C1927B /* ResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570DF245678DF00C1927B /* ResultSpec.swift */; };
 		156570E32456795900C1927B /* NetworkErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570E22456795900C1927B /* NetworkErrorMock.swift */; };
 		156570E724567CAD00C1927B /* StringExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570E624567CAD00C1927B /* StringExtensionsSpec.swift */; };
 		156570E924567E9700C1927B /* FloatExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570E824567E9700C1927B /* FloatExtensionsSpec.swift */; };
 		156570EC2456810C00C1927B /* StringValidationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570EB2456810C00C1927B /* StringValidationSpec.swift */; };
 		156570EE245689F400C1927B /* ResponseStatusSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570ED245689F400C1927B /* ResponseStatusSpec.swift */; };
+		156570F12457C21100C1927B /* LoginServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570F02457C21100C1927B /* LoginServiceSpec.swift */; };
+		156570F32457D1BB00C1927B /* Result+Nimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570F22457D1BB00C1927B /* Result+Nimble.swift */; };
+		156570F52457D1FB00C1927B /* NetworkCoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570F42457D1FB00C1927B /* NetworkCoreMock.swift */; };
+		156570F82457D3B300C1927B /* LoginRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570F72457D3B300C1927B /* LoginRequestSpec.swift */; };
+		156570FD2457DADC00C1927B /* TableViewDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570FC2457DADC00C1927B /* TableViewDataSourceSpec.swift */; };
+		156570FF2457DB4E00C1927B /* MockTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570FE2457DB4E00C1927B /* MockTableViewSection.swift */; };
+		156571012457DBA000C1927B /* MockTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156571002457DBA000C1927B /* MockTableView.swift */; };
+		156571032457DBC800C1927B /* MockTableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156571022457DBC800C1927B /* MockTableViewCellBuilder.swift */; };
+		156571052457DE2A00C1927B /* UIViewcontrollerExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156571042457DE2A00C1927B /* UIViewcontrollerExtensionsSpec.swift */; };
+		156571072457E73D00C1927B /* StatementViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156571062457E73D00C1927B /* StatementViewModelSpec.swift */; };
+		156571092457E9C400C1927B /* StatementMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156571082457E9C400C1927B /* StatementMock.swift */; };
+		1565710B2457F77000C1927B /* StatementViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565710A2457F77000C1927B /* StatementViewControllerSpec.swift */; };
+		1565710E2457FAEC00C1927B /* StatementServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565710D2457FAEC00C1927B /* StatementServiceSpec.swift */; };
 		15660E402450FCEB007C1B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E3F2450FCEB007C1B41 /* AppDelegate.swift */; };
 		15660E492450FCEC007C1B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15660E482450FCEC007C1B41 /* Assets.xcassets */; };
 		15660E4C2450FCEC007C1B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15660E4A2450FCEC007C1B41 /* LaunchScreen.storyboard */; };
@@ -160,13 +173,26 @@
 		156570C8245611C700C1927B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		156570D024564B4B00C1927B /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		156570D624564F6B00C1927B /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
-		156570D82456557500C1927B /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
+		156570D82456557500C1927B /* LoginModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelMock.swift; sourceTree = "<group>"; };
 		156570DF245678DF00C1927B /* ResultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSpec.swift; sourceTree = "<group>"; };
 		156570E22456795900C1927B /* NetworkErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorMock.swift; sourceTree = "<group>"; };
 		156570E624567CAD00C1927B /* StringExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsSpec.swift; sourceTree = "<group>"; };
 		156570E824567E9700C1927B /* FloatExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensionsSpec.swift; sourceTree = "<group>"; };
 		156570EB2456810C00C1927B /* StringValidationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidationSpec.swift; sourceTree = "<group>"; };
 		156570ED245689F400C1927B /* ResponseStatusSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatusSpec.swift; sourceTree = "<group>"; };
+		156570F02457C21100C1927B /* LoginServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceSpec.swift; sourceTree = "<group>"; };
+		156570F22457D1BB00C1927B /* Result+Nimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Nimble.swift"; sourceTree = "<group>"; };
+		156570F42457D1FB00C1927B /* NetworkCoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCoreMock.swift; sourceTree = "<group>"; };
+		156570F72457D3B300C1927B /* LoginRequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestSpec.swift; sourceTree = "<group>"; };
+		156570FC2457DADC00C1927B /* TableViewDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceSpec.swift; sourceTree = "<group>"; };
+		156570FE2457DB4E00C1927B /* MockTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewSection.swift; sourceTree = "<group>"; };
+		156571002457DBA000C1927B /* MockTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableView.swift; sourceTree = "<group>"; };
+		156571022457DBC800C1927B /* MockTableViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewCellBuilder.swift; sourceTree = "<group>"; };
+		156571042457DE2A00C1927B /* UIViewcontrollerExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewcontrollerExtensionsSpec.swift; sourceTree = "<group>"; };
+		156571062457E73D00C1927B /* StatementViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModelSpec.swift; sourceTree = "<group>"; };
+		156571082457E9C400C1927B /* StatementMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementMock.swift; sourceTree = "<group>"; };
+		1565710A2457F77000C1927B /* StatementViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewControllerSpec.swift; sourceTree = "<group>"; };
+		1565710D2457FAEC00C1927B /* StatementServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementServiceSpec.swift; sourceTree = "<group>"; };
 		15660E3C2450FCEB007C1B41 /* TestiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15660E3F2450FCEB007C1B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15660E482450FCEC007C1B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -487,6 +513,7 @@
 			children = (
 				156570D024564B4B00C1927B /* LoginViewControllerSpec.swift */,
 				156570D624564F6B00C1927B /* LoginViewModelSpec.swift */,
+				156570F02457C21100C1927B /* LoginServiceSpec.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -494,6 +521,9 @@
 		156570CC24564AD600C1927B /* Statement */ = {
 			isa = PBXGroup;
 			children = (
+				156571062457E73D00C1927B /* StatementViewModelSpec.swift */,
+				1565710A2457F77000C1927B /* StatementViewControllerSpec.swift */,
+				1565710D2457FAEC00C1927B /* StatementServiceSpec.swift */,
 			);
 			path = Statement;
 			sourceTree = "<group>";
@@ -518,7 +548,11 @@
 			isa = PBXGroup;
 			children = (
 				156570E12456793500C1927B /* Network */,
-				156570D82456557500C1927B /* UserMock.swift */,
+				156570D82456557500C1927B /* LoginModelMock.swift */,
+				156571082457E9C400C1927B /* StatementMock.swift */,
+				156570FE2457DB4E00C1927B /* MockTableViewSection.swift */,
+				156571002457DBA000C1927B /* MockTableView.swift */,
+				156571022457DBC800C1927B /* MockTableViewCellBuilder.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -526,6 +560,7 @@
 		156570DA2456579800C1927B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				156570F22457D1BB00C1927B /* Result+Nimble.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -533,6 +568,7 @@
 		156570DE245678D000C1927B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				156570F62457D39E00C1927B /* Requests */,
 				156570DF245678DF00C1927B /* ResultSpec.swift */,
 				156570ED245689F400C1927B /* ResponseStatusSpec.swift */,
 			);
@@ -543,6 +579,7 @@
 			isa = PBXGroup;
 			children = (
 				156570E22456795900C1927B /* NetworkErrorMock.swift */,
+				156570F42457D1FB00C1927B /* NetworkCoreMock.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -550,6 +587,7 @@
 		156570E424567C9000C1927B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				156571042457DE2A00C1927B /* UIViewcontrollerExtensionsSpec.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -562,6 +600,38 @@
 				156570EB2456810C00C1927B /* StringValidationSpec.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		156570F62457D39E00C1927B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				156570F72457D3B300C1927B /* LoginRequestSpec.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		156570F92457DAC300C1927B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				156570FA2457DACA00C1927B /* Utils */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		156570FA2457DACA00C1927B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				156570FB2457DAD100C1927B /* TableView */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		156570FB2457DAD100C1927B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				156570FC2457DADC00C1927B /* TableViewDataSourceSpec.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		15660E332450FCEB007C1B41 = {
@@ -599,6 +669,7 @@
 		15660E552450FCEC007C1B41 /* TestiOS2Tests */ = {
 			isa = PBXGroup;
 			children = (
+				156570F92457DAC300C1927B /* Main */,
 				156570DE245678D000C1927B /* Network */,
 				156570DA2456579800C1927B /* Resources */,
 				156570D224564BF200C1927B /* Mocks */,
@@ -1136,13 +1207,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				156570D124564B4B00C1927B /* LoginViewControllerSpec.swift in Sources */,
-				156570D92456557500C1927B /* UserMock.swift in Sources */,
+				156570F52457D1FB00C1927B /* NetworkCoreMock.swift in Sources */,
+				156570D92456557500C1927B /* LoginModelMock.swift in Sources */,
+				1565710B2457F77000C1927B /* StatementViewControllerSpec.swift in Sources */,
+				156570FD2457DADC00C1927B /* TableViewDataSourceSpec.swift in Sources */,
 				156570D724564F6B00C1927B /* LoginViewModelSpec.swift in Sources */,
 				156570EE245689F400C1927B /* ResponseStatusSpec.swift in Sources */,
+				156570F12457C21100C1927B /* LoginServiceSpec.swift in Sources */,
 				156570E0245678DF00C1927B /* ResultSpec.swift in Sources */,
 				156570EC2456810C00C1927B /* StringValidationSpec.swift in Sources */,
+				1565710E2457FAEC00C1927B /* StatementServiceSpec.swift in Sources */,
+				156571052457DE2A00C1927B /* UIViewcontrollerExtensionsSpec.swift in Sources */,
 				156570E924567E9700C1927B /* FloatExtensionsSpec.swift in Sources */,
 				156570E32456795900C1927B /* NetworkErrorMock.swift in Sources */,
+				156571012457DBA000C1927B /* MockTableView.swift in Sources */,
+				156571092457E9C400C1927B /* StatementMock.swift in Sources */,
+				156570F32457D1BB00C1927B /* Result+Nimble.swift in Sources */,
+				156571072457E73D00C1927B /* StatementViewModelSpec.swift in Sources */,
+				156570FF2457DB4E00C1927B /* MockTableViewSection.swift in Sources */,
+				156570F82457D3B300C1927B /* LoginRequestSpec.swift in Sources */,
+				156571032457DBC800C1927B /* MockTableViewCellBuilder.swift in Sources */,
 				156570E724567CAD00C1927B /* StringExtensionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

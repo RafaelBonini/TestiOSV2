@@ -13,15 +13,14 @@ extension StatementViewModel {
             switch result {
             case .success(let result):
                 guard
-                    let _ = result.error,
                     let statements = result.statementList else {
-                        self.treatFailure()
+                        self.factoryState = .error
                         return
                 }
                 
                 self.factoryState = .success(statements)
             case .failure(_):
-                self.treatFailure()
+                self.factoryState = .error
             }
         }
     }
