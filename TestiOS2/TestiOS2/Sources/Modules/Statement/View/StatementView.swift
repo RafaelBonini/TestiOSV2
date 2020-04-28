@@ -31,7 +31,7 @@ final class StatementView: UIView {
     private lazy var logoutButton: UIButton = {
         let button = UIButton()
         button.setImage(R.image.logout_icon(), for: .normal)
-        button.addTarget(self, action: #selector(tappedLogout), for: .touchUpInside)
+        button.addTarget(viewModel, action: #selector(viewModel.logout), for: .touchUpInside)
         
         return button
     }()
@@ -92,10 +92,6 @@ final class StatementView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    @objc func tappedLogout() {
-        self.viewModel.logout()
     }
 }
 

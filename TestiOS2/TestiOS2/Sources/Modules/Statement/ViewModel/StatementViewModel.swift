@@ -55,7 +55,7 @@ final class StatementViewModel {
         controllerDelegate?.showAlert(with: R.string.localizable.commonServiceErrorDesc())
     }
     
-    func logout() {
+    @objc func logout() {
         controllerDelegate?.popStatementController()
     }
     
