@@ -12,7 +12,7 @@ protocol StatementRouterProtocol: class {
     func popStatementController()
 }
 
-class StatementRouter: StatementRouterProtocol {
+final class StatementRouter: StatementRouterProtocol {
     
     weak var viewController: StatementViewController?
     

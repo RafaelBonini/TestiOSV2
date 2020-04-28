@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatementViewController: UIViewController {
+final class StatementViewController: UIViewController {
     
     let viewModel: StatementViewModel
     let contentView: StatementView

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginViewModel {
+final class LoginViewModel {
     
     weak var controllerDelegate: LoginViewControllerDelegate?
     weak var viewDelegate: LoginViewModelViewDelegate?

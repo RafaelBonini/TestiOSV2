@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatementViewModel {
+final class StatementViewModel {
     let user: UserAccount
     
     weak var viewDelegate: StatementViewModelViewDelegate?

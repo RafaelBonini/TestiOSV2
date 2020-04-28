@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatementView: UIView {
+final class StatementView: UIView {
     
     let viewModel: StatementViewModel
     
@@ -126,8 +126,6 @@ extension StatementView: ViewCodeProtocol {
         
         addSubview(recentLabel)
         addSubview(statementTableView)
-//        addSubview(loadingIndicator)
-//        statementTableView.addSubview(loadingIndicator)
     }
     
     func setupConstraints() {

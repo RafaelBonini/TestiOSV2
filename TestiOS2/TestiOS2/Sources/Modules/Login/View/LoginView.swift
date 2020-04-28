@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginView: UIView, KeyboardManagerBuilder {
+final class LoginView: UIView, KeyboardManagerBuilder {
     
     var keyboardManager: KeyboardAnchorManager?
     var topMostConstraint: NSLayoutConstraint?
