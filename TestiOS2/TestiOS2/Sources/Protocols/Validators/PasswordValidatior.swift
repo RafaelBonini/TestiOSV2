@@ -25,15 +25,4 @@ extension PasswordValidatior {
 
         return true
     }
-
-//    func validate(password: String?) -> String? {
-//
-//        guard let password = password,
-//            !password.isEmpty,
-//            !password.validatePasswordRegex() else {
-//                return nil
-//        }
-//
-//        return errorMessage(validation: .password)
-//    }
 }

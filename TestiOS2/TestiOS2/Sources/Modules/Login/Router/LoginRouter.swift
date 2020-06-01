@@ -12,7 +12,7 @@ protocol LoginRouterProtocol: class {
     func navigateToStatement(with user: UserAccount)
 }
 
-final class LoginRouter: LoginRouterProtocol {
+class LoginRouter: LoginRouterProtocol {
     
     weak var viewController: LoginViewController?
     

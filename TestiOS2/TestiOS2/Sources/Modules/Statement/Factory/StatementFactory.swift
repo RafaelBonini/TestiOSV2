@@ -32,4 +32,3 @@ final class StatementFactory {
         return items.map { StatementCellBuilder(item: $0) }
     }
 }
-

@@ -19,7 +19,7 @@ final class StatementTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var titleLabel: UILabel = {
+    private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultRegularFontWithSize(size: 16)
         label.textColor = AppColors.custom.placeHolderlightBlue
@@ -27,7 +27,7 @@ final class StatementTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var dateLabel: UILabel = {
+     private(set) lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultRegularFontWithSize(size: 12)
         label.textColor = AppColors.custom.placeHolderlightBlue
@@ -36,7 +36,7 @@ final class StatementTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var descLabel: UILabel = {
+    private(set) lazy var descLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultRegularFontWithSize(size: 16)
         label.textColor = AppColors.custom.darkGrey
@@ -44,7 +44,7 @@ final class StatementTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var valueLabel: UILabel = {
+    private(set) lazy var valueLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultLightFontWithSize(size: 20)
         label.textColor = AppColors.custom.darkGrey
@@ -89,12 +89,12 @@ extension StatementTableViewCell: ViewCodeProtocol {
     }
     
     func setupConstraints() {
-        
         containerView.constraint { view in
             [view.topAnchor.constraint(equalTo: contentView.topAnchor),
             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -15),
-            view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)]
+            view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            view.heightAnchor.constraint(equalToConstant: 80)]
         }
         
         titleLabel.constraint { view in

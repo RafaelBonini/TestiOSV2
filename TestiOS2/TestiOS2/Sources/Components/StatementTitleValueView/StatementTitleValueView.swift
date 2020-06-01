@@ -10,10 +10,10 @@ import UIKit
 
 class StatementTitleValueView: UIView {
     
-    let title: String
-    let value: String
+    private let title: String
+    private let value: String
     
-    private lazy var titleLabel: UILabel = {
+    private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultRegularFontWithSize(size: 12)
         label.textColor = .white
@@ -23,7 +23,7 @@ class StatementTitleValueView: UIView {
         return label
     }()
     
-    private lazy var valueLabel: UILabel = {
+    private(set) lazy var valueLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultLightFontWithSize(size: 25)
         label.textColor = .white
@@ -53,7 +53,6 @@ extension StatementTitleValueView: ViewCodeProtocol {
     }
     
     func setupConstraints() {
-        
         titleLabel.constraint { view in
             [view.topAnchor.constraint(equalTo: topAnchor),
              view.leadingAnchor.constraint(equalTo: leadingAnchor),

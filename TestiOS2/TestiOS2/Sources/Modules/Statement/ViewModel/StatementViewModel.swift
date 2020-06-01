@@ -8,10 +8,10 @@
 
 import UIKit
 
-final class StatementViewModel {
+final class StatementViewModel: StatementViewModelProtocol {
+    var view: StatementViewProtocol?
     let user: UserAccount
     
-    weak var viewDelegate: StatementViewModelViewDelegate?
     weak var controllerDelegate: StatementViewControllerDelegate?
     
     let statementService: StatementServiceProtocol
@@ -19,7 +19,7 @@ final class StatementViewModel {
     var factoryState: StatementFactoryState {
         didSet {
             updateUI()
-            viewDelegate?.reloadTableView()
+            view?.reloadTable()
         }
     }
     
@@ -33,22 +33,13 @@ final class StatementViewModel {
     func updateUI() {
         switch factoryState {
         case .success:
-            viewDelegate?.stoploading()
+            view?.stoploading()
         case .loading:
-            viewDelegate?.startloading()
+            view?.startloading()
         case .error:
-            viewDelegate?.stoploading()
+            view?.stoploading()
             treatFailure()
         }
-    }
-    
-    func setupDataSource(in tableView: UITableView) {
-        let factory = StatementFactory(state: factoryState)
-
-        self.dataSource = TableViewDataSource(
-            sections: factory.make(),
-            tableView: tableView
-        )
     }
     
     func treatFailure() {
@@ -59,7 +50,7 @@ final class StatementViewModel {
         controllerDelegate?.popStatementController()
     }
     
-    func buildAccount() -> String {
+    func buildUserAccount() -> String {
         guard let bankAccount = user.bankAccount else { return ""}
         return bankAccount + " / " + formatAgency()
     }

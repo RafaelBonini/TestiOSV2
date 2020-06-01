@@ -11,7 +11,7 @@ import Alamofire
 
 class NetworkCore {
     
-    let alamofireManager = Alamofire.SessionManager.default
+    private let alamofireManager = Alamofire.SessionManager.default
     
     static let downloadManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
@@ -22,7 +22,7 @@ class NetworkCore {
     public func requestCodable<T: Codable, U> (request: RequestProtocol,
                                                completion: @escaping (Result<T, U>) -> Void) {
         
-        if !Connectivity.isConnectedToNetwork() {
+        guard Connectivity.isConnectedToNetwork() else {
             completion(.failure(U(responseStatus: .serviceUnavaliable, error: nil, data: nil)))
             return
         }
@@ -43,13 +43,13 @@ class NetworkCore {
         
         Alamofire.request(url,
                           method: requestType,
-                          parameters: params, encoding: encoded, headers: headers)
+                          parameters: params,
+                          encoding: encoded,
+                          headers: headers
+        )
             .responseJSON { (response) in
-                
                 switch response.result {
-                    
                 case .success:
-                    
                     do {
                         let data = try JSONDecoder().decode(T.self, from: response.data ?? Data())
                         completion(.success(data))
@@ -68,6 +68,7 @@ class NetworkCore {
                         error: error,
                         data: response.data
                     )
+                    
                     completion(.failure(error))
                 }
         }

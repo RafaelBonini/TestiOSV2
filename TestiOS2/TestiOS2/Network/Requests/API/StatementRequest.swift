@@ -17,8 +17,7 @@ enum StatementRequest: APIRequest {
         return "/statements/\(id)"
     }
     
-    var method: Method { return .GET }
+    var method: RequestMethod { return .GET }
     
     var params: Parameters? { return .none }
 }
-

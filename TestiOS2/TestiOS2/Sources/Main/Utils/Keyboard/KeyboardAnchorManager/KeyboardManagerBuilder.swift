@@ -27,6 +27,7 @@ extension KeyboardManagerBuilder where Self: UIView {
             bottomMostConstraint: bottomMostConstraint ?? NSLayoutConstraint(),
             didShowKeyboardCallback: didShowKeyboardCallback
         )
+
         keyboardManager?.start()
     }
 }

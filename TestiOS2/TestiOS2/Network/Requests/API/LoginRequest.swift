@@ -14,7 +14,7 @@ enum LoginRequest: APIRequest {
     
     var path: String { return "/login" }
     
-    var method: Method { return .POST }
+    var method: RequestMethod { return .POST }
     
     var params: Parameters? {
         guard case let .login(user, password) = self else { return .none }

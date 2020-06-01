@@ -15,7 +15,7 @@ class StatementViewModelSpec: QuickSpec {
     override func spec() {
         describe("given a statementViewModel") {
             var sut: StatementViewModel!
-            var viewDelegateMock: StatementViewModelViewDelegateMock!
+            var viewDelegateMock: StatementViewProtocolMock!
             var controllerDelegateMock: StatementViewControllerDelegateMock!
             var statementServiceMock: StatementServiceMock!
             var statementFactory: StatementFactory!
@@ -28,7 +28,7 @@ class StatementViewModelSpec: QuickSpec {
                 
                 it("then it should return correctly the formatted valud") {
                     let expectedFormattedValue = "1234 / 12.341234-1"
-                    expect(sut.buildAccount()).to(equal(expectedFormattedValue))
+                    expect(sut.buildUserAccount()).to(equal(expectedFormattedValue))
                 }
             }
             
@@ -69,7 +69,7 @@ class StatementViewModelSpec: QuickSpec {
                 }
                 
                 it("then it should tell the view to update the tableview") {
-                    expect(viewDelegateMock.didCallReloadTableView).to(beTrue())
+                    expect(viewDelegateMock.didCallReloadTable).to(beTrue())
                 }
             }
             
@@ -84,7 +84,7 @@ class StatementViewModelSpec: QuickSpec {
                 }
                 
                 it("then it should tell the view to update the tableview") {
-                    expect(viewDelegateMock.didCallReloadTableView).to(beTrue())
+                    expect(viewDelegateMock.didCallReloadTable).to(beTrue())
                 }
             }
             
@@ -99,7 +99,7 @@ class StatementViewModelSpec: QuickSpec {
                 }
                 
                 it("then it should tell the view to update the tableview") {
-                    expect(viewDelegateMock.didCallReloadTableView).to(beTrue())
+                    expect(viewDelegateMock.didCallReloadTable).to(beTrue())
                 }
             }
             
@@ -114,7 +114,7 @@ class StatementViewModelSpec: QuickSpec {
                 }
                 
                 it("then it should tell the view to update the tableview") {
-                    expect(viewDelegateMock.didCallReloadTableView).to(beTrue())
+                    expect(viewDelegateMock.didCallReloadTable).to(beTrue())
                 }
                 
                 it("then it should return the correct number of items") {
@@ -141,7 +141,7 @@ class StatementViewModelSpec: QuickSpec {
                 }
                 
                 it("then it should tell the view to update the tableview") {
-                    expect(viewDelegateMock.didCallReloadTableView).to(beTrue())
+                    expect(viewDelegateMock.didCallReloadTable).to(beTrue())
                 }
                 
                 it("then it should tell view controller to show an alert") {
@@ -150,7 +150,7 @@ class StatementViewModelSpec: QuickSpec {
             }
             
             func configureSut(service: StatementServiceMock = StatementServiceMock(statementResult: Result.success(StatementMock.valid())),
-                              viewDelegate: StatementViewModelViewDelegateMock = StatementViewModelViewDelegateMock(),
+                              viewDelegate: StatementViewProtocolMock = StatementViewProtocolMock(),
                               controllerDelegate: StatementViewControllerDelegateMock = StatementViewControllerDelegateMock(),
                               factory: StatementFactory = StatementFactory(state: StatementFactoryState.success(StatementMock.valid().statementList!))) {
                 
@@ -159,7 +159,7 @@ class StatementViewModelSpec: QuickSpec {
                 controllerDelegateMock = controllerDelegate
                 statementFactory = factory
                 sut = StatementViewModel(user: LoginModelMock.valid().userAccount!, statementService: service)
-                sut.viewDelegate = viewDelegateMock
+                sut.view = viewDelegateMock
                 sut.controllerDelegate = controllerDelegateMock
             }
         }
@@ -167,13 +167,13 @@ class StatementViewModelSpec: QuickSpec {
 }
 
 
-class StatementViewModelViewDelegateMock: StatementViewModelViewDelegate {
-    var didCallReloadTableView = false
+class StatementViewProtocolMock: StatementViewProtocol {
+    var didCallReloadTable = false
     var didCallStartloading = false
     var didCallStoploading = false
-    
-    func reloadTableView() {
-        didCallReloadTableView = true
+
+    func reloadTable() {
+        didCallReloadTable = true
     }
     
     func startloading() {

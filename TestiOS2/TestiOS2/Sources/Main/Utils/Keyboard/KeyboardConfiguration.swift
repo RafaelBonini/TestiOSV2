@@ -10,7 +10,6 @@ import Foundation
 import IQKeyboardManagerSwift
 
 class KeyboardConfiguration {
-
     static func apply() {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false

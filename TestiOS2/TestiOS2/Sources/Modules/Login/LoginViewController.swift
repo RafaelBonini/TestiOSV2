@@ -12,7 +12,7 @@ final class LoginViewController: UIViewController {
     
     let viewModel: LoginViewModel
     let contentView: LoginView
-    var router: LoginRouter = LoginRouter()
+    var router = LoginRouter()
     
     init(viewModel: LoginViewModel = LoginViewModel()) {
         self.viewModel = viewModel

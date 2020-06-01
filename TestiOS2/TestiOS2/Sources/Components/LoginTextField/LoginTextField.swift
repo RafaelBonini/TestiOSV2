@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginTextField: UITextField {
-    let padding = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: 5)
+    private let padding = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: 5)
     
     init(placeholder: String) {
         super.init(frame: .zero)

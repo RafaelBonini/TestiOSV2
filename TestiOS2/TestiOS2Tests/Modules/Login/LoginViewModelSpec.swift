@@ -14,7 +14,7 @@ class LoginViewModelSpec: QuickSpec {
     override func spec() {
         describe("Given a LoginViewModel") {
             var sut: LoginViewModel!
-            var viewDelegateMock: LoginViewModelViewDelegateMock!
+            var viewDelegateMock: LoginViewProtocolMock!
             var controllerDelegateMock: LoginViewControllerDelegateMock!
             var loginServiceMock: LoginServiceMock!
             var storageMock: StorageMock!
@@ -88,7 +88,7 @@ class LoginViewModelSpec: QuickSpec {
 
             func configureSut(storage: StorageMock = StorageMock(),
                               service: LoginServiceMock = LoginServiceMock(loginResult: Result.success(LoginModelMock.valid())),
-                              viewDelegate: LoginViewModelViewDelegateMock = LoginViewModelViewDelegateMock(),
+                              viewDelegate: LoginViewProtocolMock = LoginViewProtocolMock(),
                               controllerDelegate: LoginViewControllerDelegateMock = LoginViewControllerDelegateMock()) {
                 
                 storageMock = storage
@@ -96,7 +96,7 @@ class LoginViewModelSpec: QuickSpec {
                 viewDelegateMock = viewDelegate
                 controllerDelegateMock = controllerDelegate
                 sut = LoginViewModel(loginService: loginServiceMock, storage: storageMock)
-                sut.viewDelegate = viewDelegateMock
+                sut.view = viewDelegateMock
                 sut.controllerDelegate = controllerDelegateMock
             }
         }
@@ -116,7 +116,7 @@ class LoginViewControllerDelegateMock: LoginViewControllerDelegate {
     }
 }
 
-class LoginViewModelViewDelegateMock: LoginViewModelViewDelegate {
+class LoginViewProtocolMock: LoginViewProtocol {
     var didCallStartLoading = false
     var didCallStopLoading = false
     

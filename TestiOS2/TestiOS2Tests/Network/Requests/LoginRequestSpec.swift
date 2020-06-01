@@ -12,14 +12,14 @@ import Nimble
 
 class LoginRequestSpec: QuickSpec {
     override func spec() {
+        var loginRequest: LoginRequest!
+        let user = "user"
+        let password = "password"
         describe("given a login request") {
-            var loginRequest: LoginRequest!
-            let user = "user"
-            let password = "password"
-
-            context("when using login request") {
+            beforeEach {
                 loginRequest = LoginRequest.login(user: user, password: password)
-                
+            }
+            context("when using login request") {
                 it("then the path should be correct") {
                     let expectedPath = "/login"
                     let expectedBaseUrl = URLs().baseURL
@@ -35,7 +35,7 @@ class LoginRequestSpec: QuickSpec {
                 }
                 
                 it("then the method should be correct") {
-                    let expectedMethod = Method.POST
+                    let expectedMethod = RequestMethod.POST
                     expect(loginRequest.method).to(equal(expectedMethod))
                 }
                 

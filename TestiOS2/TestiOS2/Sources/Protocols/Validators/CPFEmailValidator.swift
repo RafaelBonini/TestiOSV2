@@ -25,15 +25,4 @@ extension CPFEmailValidator {
 
         return true
     }
-
-//    func validate(cpfEmail: String?) -> String? {
-//        guard
-//            let cpfEmail = cpfEmail,
-//            !cpfEmail.isEmpty,
-//            !cpfEmail.validateCpf(),
-//            !cpfEmail.validateEmailRegex()
-//            else { return nil }
-//
-//        return errorMessage(validation: .cpfEmail)
-//    }
 }

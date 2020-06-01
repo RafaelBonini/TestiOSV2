@@ -15,14 +15,12 @@ class LoginViewControllerSpec: QuickSpec {
     override func spec() {
         var sut: LoginViewController!
         var navigationController: UINavigationController!
+        var loginRouterMock: LoginRouterMock!
         
         describe("Given a LoginViewController") {
-            context("When the view did load"){
+            context("When the view did load") {
                 beforeEach {
-                    
-                    let viewModel = LoginViewModel()
-                    sut = LoginViewController(viewModel: viewModel)
-                    navigationController = UINavigationController(rootViewController: sut)
+                    configureSut()
                     sut.viewDidLoad()
                 }
                 
@@ -34,6 +32,34 @@ class LoginViewControllerSpec: QuickSpec {
                     expect(navigationController.navigationBar.isHidden).to(beTrue())
                 }
             }
+            
+            context("when routing to statement screen") {
+                beforeEach {
+                    loginRouterMock = LoginRouterMock()
+                    configureSut()
+                    sut.router = loginRouterMock
+                    let user = UserAccount(userId: nil, name: nil, bankAccount: nil, agency: nil, balance: nil)
+                    sut.navigateToStatement(with: user)
+                }
+                
+                it("then it should call router method when action is triggered") {
+                    expect(loginRouterMock.didCallNavigateToStatement).to(beTrue())
+                }
+            }
         }
+        
+        func configureSut() {
+            let viewModel = LoginViewModel()
+            sut = LoginViewController(viewModel: viewModel)
+            navigationController = UINavigationController(rootViewController: sut)
+        }
+    }
+}
+
+class LoginRouterMock: LoginRouter {
+    var didCallNavigateToStatement = false
+
+    override func navigateToStatement(with user: UserAccount) {
+        didCallNavigateToStatement = true
     }
 }

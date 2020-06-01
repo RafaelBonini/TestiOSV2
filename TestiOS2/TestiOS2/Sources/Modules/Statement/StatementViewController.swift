@@ -12,7 +12,7 @@ final class StatementViewController: UIViewController {
     
     let viewModel: StatementViewModel
     let contentView: StatementView
-    let router: StatementRouter = StatementRouter()
+    var router: StatementRouter = StatementRouter()
     
     init(viewModel: StatementViewModel) {
         self.viewModel = viewModel

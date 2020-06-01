@@ -14,28 +14,14 @@ enum Validation: String {
 }
 
 protocol StringValidator {
-    func validate(_: String, _ confirmation: String?,
-                  validation: Validation) -> Bool
-//    func validatingMessage(_: String, _ confirmation: String?,
-//                           validation: Validation,
-//                           enableRequiredFieldRule: Bool) -> String?
+    func validate(_: String, validation: Validation) -> Bool
 }
 
 extension StringValidator {
-
-    func validate(_ value: String, _ confirmation: String? = nil, validation: Validation) -> Bool {
+    func validate(_ value: String, validation: Validation) -> Bool {
         switch validation {
         case .cpfEmail: return (self as? CPFEmailValidator)?.validate(cpfEmail: value) ?? false
         case .password: return (self as? PasswordValidatior)?.validate(password: value) ?? false
         }
     }
-
-//    func validatingMessage(_ value: String, _ confirmation: String? = nil,
-//                           validation: Validation, enableRequiredFieldRule: Bool = false) -> String? {
-//
-//        switch validation {
-//        case .cpfEmail: return (self as? CPFEmailValidator)?.validate(cpfEmail: value)
-//        case .password: return (self as? PasswordValidatior)?.validate(password: value)
-//        }
-//    }
 }

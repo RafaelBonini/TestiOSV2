@@ -11,6 +11,6 @@ import Alamofire
 protocol RequestProtocol {
     var baseURL: String { get }
     var path: String { get }
-    var method: Method { get }
+    var method: RequestMethod { get }
     var params: Parameters? { get }
 }

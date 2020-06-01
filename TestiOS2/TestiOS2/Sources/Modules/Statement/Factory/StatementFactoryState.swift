@@ -15,7 +15,6 @@ enum StatementFactoryState {
         if case let .success(statements) = self {
             return statements
         }
-
         return []
     }
 }

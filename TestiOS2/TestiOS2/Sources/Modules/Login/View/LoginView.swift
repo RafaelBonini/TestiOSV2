@@ -14,9 +14,9 @@ final class LoginView: UIView, KeyboardManagerBuilder {
     var topMostConstraint: NSLayoutConstraint?
     var bottomMostConstraint: NSLayoutConstraint?
     
-    let viewModel: LoginViewModel
+    private let viewModel: LoginViewModelProtocol
     
-    private lazy var logoImageView: UIImageView = {
+    private(set) lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = R.image.logo_icon()
         
@@ -31,7 +31,7 @@ final class LoginView: UIView, KeyboardManagerBuilder {
         return stack
     }()
     
-    private lazy var userTextField: LoginTextField = {
+    private(set) lazy var userTextField: LoginTextField = {
         let textfield = LoginTextField(
             placeholder: R.string.localizable.textfieldUserPlaceholderText()
         )
@@ -41,12 +41,12 @@ final class LoginView: UIView, KeyboardManagerBuilder {
         if #available(iOS 11.0, *) {
             textfield.textContentType = .username
         }
-        textfield.text = viewModel.loadCredentials() ?? ""
+        textfield.text = viewModel.loadCredentials()
         
         return textfield
     }()
     
-    private lazy var passwordTextField: LoginTextField = {
+    private(set) lazy var passwordTextField: LoginTextField = {
         let textfield = LoginTextField(
             placeholder: R.string.localizable.textfieldPasswordPlaceholderText()
         )
@@ -60,7 +60,7 @@ final class LoginView: UIView, KeyboardManagerBuilder {
         return textfield
     }()
     
-    private lazy var loginButton: LoginButton = {
+    private(set) lazy var loginButton: LoginButton = {
         let button = LoginButton(
             title: R.string.localizable.buttonTitleLogin()
         )
@@ -78,10 +78,10 @@ final class LoginView: UIView, KeyboardManagerBuilder {
        return textFieldsStackView
     }()
     
-    init(viewModel: LoginViewModel) {
+    init(viewModel: LoginViewModelProtocol) {
         self.viewModel = viewModel
         super.init(frame: .zero)
-        self.viewModel.viewDelegate = self
+        self.viewModel.view = self
         buildView()
     }
     
@@ -89,7 +89,7 @@ final class LoginView: UIView, KeyboardManagerBuilder {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func nextReturnKeyTap(){
+    @objc private func nextReturnKeyTap(){
         passwordTextField.becomeFirstResponder()
     }
     
@@ -98,7 +98,7 @@ final class LoginView: UIView, KeyboardManagerBuilder {
     }
 }
 
-extension LoginView: LoginViewModelViewDelegate {
+extension LoginView: LoginViewProtocol {
     func startloading() {
         loginButton.loading()
     }

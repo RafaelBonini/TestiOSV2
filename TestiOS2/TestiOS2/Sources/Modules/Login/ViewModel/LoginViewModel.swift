@@ -8,10 +8,10 @@
 
 import Foundation
 
-final class LoginViewModel {
-    
+final class LoginViewModel: LoginViewModelProtocol {
+    weak var view: LoginViewProtocol?
+
     weak var controllerDelegate: LoginViewControllerDelegate?
-    weak var viewDelegate: LoginViewModelViewDelegate?
     let loginService: LoginServiceProtocol
     let storage: Storage
 
@@ -37,14 +37,14 @@ final class LoginViewModel {
         storage.set(cpfOrEmail, forKey: .emailOrCpf)
     }
     
-    func loadCredentials() -> String? {
+    func loadCredentials() -> String {
         guard
             let user = storage.getData(.emailOrCpf) else {
                 return ""
         }
         let userDecoded = String(data: user, encoding: .utf8)
 
-        return userDecoded
+        return userDecoded ?? ""
     }
     
     func treatLoginSuccess(with user: UserAccount) {

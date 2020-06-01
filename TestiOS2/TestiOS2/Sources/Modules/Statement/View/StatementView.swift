@@ -10,7 +10,8 @@ import UIKit
 
 final class StatementView: UIView {
     
-    let viewModel: StatementViewModel
+    private let viewModel: StatementViewModelProtocol
+    private var dataSource: TableViewDataSource?
     
     private lazy var topPortionContainer: UIView = {
         let view = UIView()
@@ -19,7 +20,7 @@ final class StatementView: UIView {
         return view
     }()
     
-    private lazy var nameLabel: UILabel = {
+     private(set) lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultLightFontWithSize(size: 25)
         label.textColor = .white
@@ -28,24 +29,24 @@ final class StatementView: UIView {
         return label
     }()
     
-    private lazy var logoutButton: UIButton = {
+     private lazy var logoutButton: UIButton = {
         let button = UIButton()
         button.setImage(R.image.logout_icon(), for: .normal)
-        button.addTarget(viewModel, action: #selector(viewModel.logout), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tapLogoutButton), for: .touchUpInside)
         
         return button
     }()
     
-    private lazy var accountView: StatementTitleValueView = {
+     private(set) lazy var accountView: StatementTitleValueView = {
         let view = StatementTitleValueView(
             title: R.string.localizable.statementAccountLabel(),
-            value: self.viewModel.buildAccount()
+            value: self.viewModel.buildUserAccount()
         )
         
         return view
     }()
     
-    private lazy var balanceView: StatementTitleValueView = {
+     private(set) lazy var balanceView: StatementTitleValueView = {
         let view = StatementTitleValueView(
             title: R.string.localizable.statementBalanceLabel(),
             value: self.viewModel.user.balance?.currencyFormatter() ?? ""
@@ -54,7 +55,7 @@ final class StatementView: UIView {
         return view
     }()
     
-    private lazy var recentLabel: UILabel = {
+     private(set) lazy var recentLabel: UILabel = {
         let label = UILabel()
         label.font = AppFont.defaultRegularFontWithSize(size: 17)
         label.textColor = AppColors.custom.darkGrey
@@ -83,24 +84,37 @@ final class StatementView: UIView {
         return indicator
     }()
     
-    init(viewModel: StatementViewModel) {
+    init(viewModel: StatementViewModelProtocol) {
         self.viewModel = viewModel
         super.init(frame: .zero)
-        self.viewModel.viewDelegate = self
+        self.viewModel.view = self
         buildView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension StatementView: StatementViewModelViewDelegate {
-    func reloadTableView() {
-        self.statementTableView.reloadData()
-        self.viewModel.setupDataSource(in: statementTableView)
+    
+    @objc func tapLogoutButton() {
+        viewModel.logout()
     }
     
+    private func reloadDataSource() {
+        let factory = StatementFactory(state: viewModel.factoryState)
+        
+        self.dataSource = TableViewDataSource(
+            sections: factory.make(),
+            tableView: statementTableView
+        )
+        statementTableView.reloadData()
+    }
+}
+
+extension StatementView: StatementViewProtocol {
+    func reloadTable() {
+        reloadDataSource()
+    }
+
     func startloading() {
         self.loadingIndicator.startAnimating()
     }
@@ -170,11 +184,6 @@ extension StatementView: ViewCodeProtocol {
              view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
              view.bottomAnchor.constraint(equalTo: bottomAnchor)]
         }
-        
-//        loadingIndicator.constraint { view in
-//            [view.centerYAnchor.constraint(equalTo: statementTableView.centerYAnchor),
-//             view.centerXAnchor.constraint(equalTo: statementTableView.centerXAnchor)]
-//        }
     }
     
     func additionalSetup() {

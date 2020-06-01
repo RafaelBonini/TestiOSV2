@@ -10,7 +10,7 @@ import UIKit
 
 class LoginButton: UIButton {
     
-    let title: String
+    private let buttonTitle: String
     
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let aIndicator = UIActivityIndicatorView(style: .white)
@@ -19,7 +19,7 @@ class LoginButton: UIButton {
     }()
     
     init(title: String){
-        self.title = title
+        self.buttonTitle = title
         super.init(frame: .zero)
         buildView()
     }
@@ -32,7 +32,7 @@ class LoginButton: UIButton {
     
     func stoploading() {
         isEnabled = true
-        setTitle(title, for: .normal)
+        setTitle(buttonTitle, for: .normal)
         activityIndicator.stopAnimating()
     }
     
@@ -53,7 +53,7 @@ extension LoginButton: ViewCodeProtocol {
         }
     }
     func additionalSetup() {
-        self.setTitle(title, for: .normal)
+        self.setTitle(buttonTitle, for: .normal)
         self.titleLabel?.font = AppFont.defaultRegularFontWithSize(size: 16)
         self.titleLabel?.textColor = .white
         self.layer.cornerRadius = 4

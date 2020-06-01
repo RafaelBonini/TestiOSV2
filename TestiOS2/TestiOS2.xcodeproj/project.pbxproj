@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1500F3C024834B5E00AF08F7 /* StatementViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3BF24834B5E00AF08F7 /* StatementViewProtocol.swift */; };
+		1500F3C224834B8C00AF08F7 /* StatementViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3C124834B8C00AF08F7 /* StatementViewModelProtocol.swift */; };
+		1500F3C4248350CE00AF08F7 /* StatementViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3C3248350CE00AF08F7 /* StatementViewSpec.swift */; };
+		1500F3C72483512D00AF08F7 /* StatementViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3C62483512D00AF08F7 /* StatementViewModelMock.swift */; };
+		1500F3C92483EBB500AF08F7 /* StatementCellBuilderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3C82483EBB500AF08F7 /* StatementCellBuilderSpec.swift */; };
+		1500F3CB2483F5A000AF08F7 /* StatementTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3CA2483F5A000AF08F7 /* StatementTableViewCellSpec.swift */; };
+		1500F3CD2483FE9600AF08F7 /* StatementRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3CC2483FE9600AF08F7 /* StatementRequestSpec.swift */; };
+		1500F3D0248401FF00AF08F7 /* RequestMethodSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3CF248401FF00AF08F7 /* RequestMethodSpec.swift */; };
+		1500F3D32484107800AF08F7 /* CPFEmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3D22484107800AF08F7 /* CPFEmailValidatorSpec.swift */; };
+		1500F3D524841E9500AF08F7 /* PasswordValidatiorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3D424841E9500AF08F7 /* PasswordValidatiorSpec.swift */; };
+		1500F3D92484270700AF08F7 /* LoginViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3D82484270700AF08F7 /* LoginViewSpec.swift */; };
+		1500F3DC2484276200AF08F7 /* LoginViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3DB2484276200AF08F7 /* LoginViewModelMock.swift */; };
+		1500F3DE24842B7900AF08F7 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3DD24842B7900AF08F7 /* LoginViewModelProtocol.swift */; };
+		1500F3E024842B9200AF08F7 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500F3DF24842B9200AF08F7 /* LoginViewProtocol.swift */; };
 		156570462452420300C1927B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 156570452452420300C1927B /* Localizable.strings */; };
 		1565704A245244F200C1927B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15657049245244F200C1927B /* AppColors.swift */; };
 		1565704F245247D600C1927B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565704E245247D600C1927B /* UIView+Extensions.swift */; };
@@ -44,10 +58,8 @@
 		156570AD2455038100C1927B /* StatementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570AC2455038100C1927B /* StatementService.swift */; };
 		156570AF245503AF00C1927B /* StatementRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570AE245503AF00C1927B /* StatementRequest.swift */; };
 		156570B12455060A00C1927B /* StatementViewModel+Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570B02455060A00C1927B /* StatementViewModel+Requester.swift */; };
-		156570B42455087100C1927B /* StatementViewModelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570B32455087100C1927B /* StatementViewModelViewDelegate.swift */; };
 		156570B72455C33A00C1927B /* StatementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570B62455C33A00C1927B /* StatementRouter.swift */; };
 		156570B92455C44700C1927B /* StatementViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570B82455C44700C1927B /* StatementViewControllerDelegate.swift */; };
-		156570BB2455EF5100C1927B /* LoginViewModelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570BA2455EF5100C1927B /* LoginViewModelViewDelegate.swift */; };
 		156570BD2455F0F000C1927B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570BC2455F0F000C1927B /* String+Extensions.swift */; };
 		156570C02455F9C400C1927B /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570BF2455F9C400C1927B /* KeychainSwift.swift */; };
 		156570C22455FA2400C1927B /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156570C12455FA2400C1927B /* KeychainSwiftAccessOptions.swift */; };
@@ -83,7 +95,7 @@
 		15660E7724510923007C1B41 /* AppDelegate+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E7624510923007C1B41 /* AppDelegate+Methods.swift */; };
 		15660E7A24510B49007C1B41 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E7924510B49007C1B41 /* R.generated.swift */; };
 		15660E8524510DCE007C1B41 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E8424510DCE007C1B41 /* Connectivity.swift */; };
-		15660E8824510E5E007C1B41 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E8724510E5E007C1B41 /* Method.swift */; };
+		15660E8824510E5E007C1B41 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E8724510E5E007C1B41 /* RequestMethod.swift */; };
 		15660E8A24510E7A007C1B41 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E8924510E7A007C1B41 /* Result.swift */; };
 		15660E8D24510EDE007C1B41 /* NetworkErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E8C24510EDE007C1B41 /* NetworkErrorProtocol.swift */; };
 		15660E8F24510EF4007C1B41 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15660E8E24510EF4007C1B41 /* ResponseStatus.swift */; };
@@ -124,6 +136,20 @@
 
 /* Begin PBXFileReference section */
 		13871F9149DA53A56E75B177 /* libPods-TestiOS2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestiOS2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1500F3BF24834B5E00AF08F7 /* StatementViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewProtocol.swift; sourceTree = "<group>"; };
+		1500F3C124834B8C00AF08F7 /* StatementViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModelProtocol.swift; sourceTree = "<group>"; };
+		1500F3C3248350CE00AF08F7 /* StatementViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewSpec.swift; sourceTree = "<group>"; };
+		1500F3C62483512D00AF08F7 /* StatementViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModelMock.swift; sourceTree = "<group>"; };
+		1500F3C82483EBB500AF08F7 /* StatementCellBuilderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementCellBuilderSpec.swift; sourceTree = "<group>"; };
+		1500F3CA2483F5A000AF08F7 /* StatementTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementTableViewCellSpec.swift; sourceTree = "<group>"; };
+		1500F3CC2483FE9600AF08F7 /* StatementRequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementRequestSpec.swift; sourceTree = "<group>"; };
+		1500F3CF248401FF00AF08F7 /* RequestMethodSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethodSpec.swift; sourceTree = "<group>"; };
+		1500F3D22484107800AF08F7 /* CPFEmailValidatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFEmailValidatorSpec.swift; sourceTree = "<group>"; };
+		1500F3D424841E9500AF08F7 /* PasswordValidatiorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatiorSpec.swift; sourceTree = "<group>"; };
+		1500F3D82484270700AF08F7 /* LoginViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewSpec.swift; sourceTree = "<group>"; };
+		1500F3DB2484276200AF08F7 /* LoginViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelMock.swift; sourceTree = "<group>"; };
+		1500F3DD24842B7900AF08F7 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
+		1500F3DF24842B9200AF08F7 /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		156570452452420300C1927B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		15657049245244F200C1927B /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		1565704E245247D600C1927B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -161,10 +187,8 @@
 		156570AC2455038100C1927B /* StatementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementService.swift; sourceTree = "<group>"; };
 		156570AE245503AF00C1927B /* StatementRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementRequest.swift; sourceTree = "<group>"; };
 		156570B02455060A00C1927B /* StatementViewModel+Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatementViewModel+Requester.swift"; sourceTree = "<group>"; };
-		156570B32455087100C1927B /* StatementViewModelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModelViewDelegate.swift; sourceTree = "<group>"; };
 		156570B62455C33A00C1927B /* StatementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementRouter.swift; sourceTree = "<group>"; };
 		156570B82455C44700C1927B /* StatementViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewControllerDelegate.swift; sourceTree = "<group>"; };
-		156570BA2455EF5100C1927B /* LoginViewModelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelViewDelegate.swift; sourceTree = "<group>"; };
 		156570BC2455F0F000C1927B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		156570BF2455F9C400C1927B /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		156570C12455FA2400C1927B /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
@@ -206,7 +230,7 @@
 		15660E7624510923007C1B41 /* AppDelegate+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Methods.swift"; sourceTree = "<group>"; };
 		15660E7924510B49007C1B41 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		15660E8424510DCE007C1B41 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
-		15660E8724510E5E007C1B41 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		15660E8724510E5E007C1B41 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		15660E8924510E7A007C1B41 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		15660E8C24510EDE007C1B41 /* NetworkErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorProtocol.swift; sourceTree = "<group>"; };
 		15660E8E24510EF4007C1B41 /* ResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatus.swift; sourceTree = "<group>"; };
@@ -258,6 +282,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1500F3C52483510600AF08F7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1500F3C62483512D00AF08F7 /* StatementViewModelMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		1500F3CE248401F100AF08F7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1500F3CF248401FF00AF08F7 /* RequestMethodSpec.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1500F3D124840FC700AF08F7 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				1500F3D22484107800AF08F7 /* CPFEmailValidatorSpec.swift */,
+				1500F3D424841E9500AF08F7 /* PasswordValidatiorSpec.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		1500F3DA2484272100AF08F7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1500F3DB2484276200AF08F7 /* LoginViewModelMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		15657047245244CE00C1927B /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,26 +419,17 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
-		15657070245293EC00C1927B /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				15657071245293FD00C1927B /* LoginViewControllerDelegate.swift */,
-				156570BA2455EF5100C1927B /* LoginViewModelViewDelegate.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		156570752453067700C1927B /* Statement */ = {
 			isa = PBXGroup;
 			children = (
+				15657079245306A400C1927B /* StatementViewController.swift */,
+				156570B82455C44700C1927B /* StatementViewControllerDelegate.swift */,
 				156570B52455C33200C1927B /* Router */,
-				156570B22455086100C1927B /* Protocol */,
 				1565708F245480E300C1927B /* Factory */,
 				1565708E245480DE00C1927B /* Builder */,
 				156570782453069300C1927B /* Service */,
 				156570772453069000C1927B /* View */,
 				156570762453068700C1927B /* ViewModel */,
-				15657079245306A400C1927B /* StatementViewController.swift */,
 			);
 			path = Statement;
 			sourceTree = "<group>";
@@ -391,6 +439,7 @@
 			children = (
 				1565707D2453071F00C1927B /* StatementViewModel.swift */,
 				156570B02455060A00C1927B /* StatementViewModel+Requester.swift */,
+				1500F3C124834B8C00AF08F7 /* StatementViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -400,6 +449,7 @@
 			children = (
 				1565709C24548BF200C1927B /* StatementTableViewCell.swift */,
 				1565707B2453071000C1927B /* StatementView.swift */,
+				1500F3BF24834B5E00AF08F7 /* StatementViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,15 +514,6 @@
 			path = UITableView;
 			sourceTree = "<group>";
 		};
-		156570B22455086100C1927B /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				156570B32455087100C1927B /* StatementViewModelViewDelegate.swift */,
-				156570B82455C44700C1927B /* StatementViewControllerDelegate.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		156570B52455C33200C1927B /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,9 +552,11 @@
 		156570CB24564AD200C1927B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1500F3DA2484272100AF08F7 /* Mock */,
 				156570D024564B4B00C1927B /* LoginViewControllerSpec.swift */,
 				156570D624564F6B00C1927B /* LoginViewModelSpec.swift */,
 				156570F02457C21100C1927B /* LoginServiceSpec.swift */,
+				1500F3D82484270700AF08F7 /* LoginViewSpec.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -521,9 +564,13 @@
 		156570CC24564AD600C1927B /* Statement */ = {
 			isa = PBXGroup;
 			children = (
+				1500F3C52483510600AF08F7 /* Mock */,
 				156571062457E73D00C1927B /* StatementViewModelSpec.swift */,
+				1500F3C82483EBB500AF08F7 /* StatementCellBuilderSpec.swift */,
 				1565710A2457F77000C1927B /* StatementViewControllerSpec.swift */,
 				1565710D2457FAEC00C1927B /* StatementServiceSpec.swift */,
+				1500F3C3248350CE00AF08F7 /* StatementViewSpec.swift */,
+				1500F3CA2483F5A000AF08F7 /* StatementTableViewCellSpec.swift */,
 			);
 			path = Statement;
 			sourceTree = "<group>";
@@ -540,6 +587,7 @@
 		156570CE24564AEB00C1927B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1500F3D124840FC700AF08F7 /* Validator */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -568,6 +616,7 @@
 		156570DE245678D000C1927B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1500F3CE248401F100AF08F7 /* Main */,
 				156570F62457D39E00C1927B /* Requests */,
 				156570DF245678DF00C1927B /* ResultSpec.swift */,
 				156570ED245689F400C1927B /* ResponseStatusSpec.swift */,
@@ -606,6 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				156570F72457D3B300C1927B /* LoginRequestSpec.swift */,
+				1500F3CC2483FE9600AF08F7 /* StatementRequestSpec.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -768,7 +818,7 @@
 				15660E8224510CE3007C1B41 /* URLs */,
 				15660E8124510CD5007C1B41 /* Connectivity */,
 				15660E8024510CCA007C1B41 /* APIRequest */,
-				15660E8724510E5E007C1B41 /* Method.swift */,
+				15660E8724510E5E007C1B41 /* RequestMethod.swift */,
 				15660E8924510E7A007C1B41 /* Result.swift */,
 				15660E8E24510EF4007C1B41 /* ResponseStatus.swift */,
 				15660E90245111BE007C1B41 /* NetworkCore.swift */,
@@ -860,7 +910,7 @@
 			isa = PBXGroup;
 			children = (
 				15660EA9245139AE007C1B41 /* LoginViewController.swift */,
-				15657070245293EC00C1927B /* Protocol */,
+				15657071245293FD00C1927B /* LoginViewControllerDelegate.swift */,
 				15660EAE245139CA007C1B41 /* Router */,
 				15660EAB245139B7007C1B41 /* Service */,
 				15660EAD245139C0007C1B41 /* View */,
@@ -882,6 +932,7 @@
 			children = (
 				15660EB124513A6C007C1B41 /* LoginViewModel.swift */,
 				1565706C2452886F00C1927B /* LoginViewModel+Requester.swift */,
+				1500F3DD24842B7900AF08F7 /* LoginViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -890,6 +941,7 @@
 			isa = PBXGroup;
 			children = (
 				15660EAF24513A27007C1B41 /* LoginView.swift */,
+				1500F3DF24842B9200AF08F7 /* LoginViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1143,7 +1195,6 @@
 				156570B12455060A00C1927B /* StatementViewModel+Requester.swift in Sources */,
 				1565709D24548BF200C1927B /* StatementTableViewCell.swift in Sources */,
 				156570B92455C44700C1927B /* StatementViewControllerDelegate.swift in Sources */,
-				156570B42455087100C1927B /* StatementViewModelViewDelegate.swift in Sources */,
 				1565706F2452931000C1927B /* UIViewController+Extensions.swift in Sources */,
 				1565709B245484D600C1927B /* TableViewSection.swift in Sources */,
 				156570C62456115C00C1927B /* KeychainSwift+Extensions.swift in Sources */,
@@ -1159,6 +1210,7 @@
 				15660E8524510DCE007C1B41 /* Connectivity.swift in Sources */,
 				15657072245293FD00C1927B /* LoginViewControllerDelegate.swift in Sources */,
 				156570C42456101500C1927B /* TegKeychainConstants.swift in Sources */,
+				1500F3E024842B9200AF08F7 /* LoginViewProtocol.swift in Sources */,
 				15660EAA245139AE007C1B41 /* LoginViewController.swift in Sources */,
 				156570C22455FA2400C1927B /* KeychainSwiftAccessOptions.swift in Sources */,
 				15660E7A24510B49007C1B41 /* R.generated.swift in Sources */,
@@ -1167,15 +1219,16 @@
 				15660E9A24511B0B007C1B41 /* URLs.swift in Sources */,
 				1565707424529B7300C1927B /* LoginRouter.swift in Sources */,
 				15660E98245116BD007C1B41 /* ResponseError.swift in Sources */,
-				156570BB2455EF5100C1927B /* LoginViewModelViewDelegate.swift in Sources */,
 				15657069245280C000C1927B /* String+Validations.swift in Sources */,
 				15660E8F24510EF4007C1B41 /* ResponseStatus.swift in Sources */,
+				1500F3DE24842B7900AF08F7 /* LoginViewModelProtocol.swift in Sources */,
 				156570922454830000C1927B /* StatementFactory.swift in Sources */,
 				15660E7724510923007C1B41 /* AppDelegate+Methods.swift in Sources */,
 				156570672452802A00C1927B /* StringValidator.swift in Sources */,
 				15660E93245115DD007C1B41 /* BaseNetworkError.swift in Sources */,
 				1565709F24548D0400C1927B /* UITableView+Reusable.swift in Sources */,
-				15660E8824510E5E007C1B41 /* Method.swift in Sources */,
+				15660E8824510E5E007C1B41 /* RequestMethod.swift in Sources */,
+				1500F3C024834B5E00AF08F7 /* StatementViewProtocol.swift in Sources */,
 				1565707E2453071F00C1927B /* StatementViewModel.swift in Sources */,
 				15660E9E24511BD8007C1B41 /* RequestProtocol.swift in Sources */,
 				156570AB2454DE0700C1927B /* StatementFactoryState.swift in Sources */,
@@ -1184,6 +1237,7 @@
 				156570A224548D5C00C1927B /* Identifiable.swift in Sources */,
 				15660E8A24510E7A007C1B41 /* Result.swift in Sources */,
 				1565705A24525DFB00C1927B /* KeyboardAnchorManager.swift in Sources */,
+				1500F3C224834B8C00AF08F7 /* StatementViewModelProtocol.swift in Sources */,
 				1565706524527FEB00C1927B /* CPFEmailValidator.swift in Sources */,
 				156570882453C3D200C1927B /* AppFont.swift in Sources */,
 				15660E962451164B007C1B41 /* User.swift in Sources */,
@@ -1208,23 +1262,33 @@
 			files = (
 				156570D124564B4B00C1927B /* LoginViewControllerSpec.swift in Sources */,
 				156570F52457D1FB00C1927B /* NetworkCoreMock.swift in Sources */,
+				1500F3DC2484276200AF08F7 /* LoginViewModelMock.swift in Sources */,
 				156570D92456557500C1927B /* LoginModelMock.swift in Sources */,
 				1565710B2457F77000C1927B /* StatementViewControllerSpec.swift in Sources */,
+				1500F3D92484270700AF08F7 /* LoginViewSpec.swift in Sources */,
 				156570FD2457DADC00C1927B /* TableViewDataSourceSpec.swift in Sources */,
 				156570D724564F6B00C1927B /* LoginViewModelSpec.swift in Sources */,
 				156570EE245689F400C1927B /* ResponseStatusSpec.swift in Sources */,
+				1500F3C4248350CE00AF08F7 /* StatementViewSpec.swift in Sources */,
 				156570F12457C21100C1927B /* LoginServiceSpec.swift in Sources */,
 				156570E0245678DF00C1927B /* ResultSpec.swift in Sources */,
+				1500F3D524841E9500AF08F7 /* PasswordValidatiorSpec.swift in Sources */,
 				156570EC2456810C00C1927B /* StringValidationSpec.swift in Sources */,
 				1565710E2457FAEC00C1927B /* StatementServiceSpec.swift in Sources */,
+				1500F3CD2483FE9600AF08F7 /* StatementRequestSpec.swift in Sources */,
 				156571052457DE2A00C1927B /* UIViewcontrollerExtensionsSpec.swift in Sources */,
 				156570E924567E9700C1927B /* FloatExtensionsSpec.swift in Sources */,
 				156570E32456795900C1927B /* NetworkErrorMock.swift in Sources */,
 				156571012457DBA000C1927B /* MockTableView.swift in Sources */,
 				156571092457E9C400C1927B /* StatementMock.swift in Sources */,
 				156570F32457D1BB00C1927B /* Result+Nimble.swift in Sources */,
+				1500F3C72483512D00AF08F7 /* StatementViewModelMock.swift in Sources */,
 				156571072457E73D00C1927B /* StatementViewModelSpec.swift in Sources */,
+				1500F3C92483EBB500AF08F7 /* StatementCellBuilderSpec.swift in Sources */,
 				156570FF2457DB4E00C1927B /* MockTableViewSection.swift in Sources */,
+				1500F3D0248401FF00AF08F7 /* RequestMethodSpec.swift in Sources */,
+				1500F3CB2483F5A000AF08F7 /* StatementTableViewCellSpec.swift in Sources */,
+				1500F3D32484107800AF08F7 /* CPFEmailValidatorSpec.swift in Sources */,
 				156570F82457D3B300C1927B /* LoginRequestSpec.swift in Sources */,
 				156571032457DBC800C1927B /* MockTableViewCellBuilder.swift in Sources */,
 				156570E724567CAD00C1927B /* StringExtensionsSpec.swift in Sources */,
